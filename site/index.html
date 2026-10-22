@@ -46,9 +46,9 @@
 .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 @media(max-width:900px){.split{grid-template-columns:1fr}}
 .fee{padding:32px}
-.fee table{width:100%;border-collapse:collapse;margin-top:14px}
-.fee td{padding:12px 0;border-top:1px solid var(--glass-line);vertical-align:top}
-.fee td:last-child{text-align:right;font-weight:700}
+.fee ul.plain{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:14px}
+.fee li{padding-top:14px;border-top:1px solid var(--glass-line);color:var(--ink-2)}
+.fee li b{color:var(--abyss);display:block;font-family:var(--font-display);letter-spacing:-.02em;margin-bottom:4px}
 .cta-block{padding:54px;text-align:center;display:grid;justify-items:center;gap:18px}
 .faq details{padding:18px 24px;margin-bottom:10px}
 .faq summary{cursor:pointer;font-weight:700;font-family:var(--font-display);letter-spacing:-.02em;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center}
@@ -127,7 +127,7 @@
 <section><div class="wrap">
   <div class="section-head"><h2>Built for the way small businesses actually invoice.</h2></div>
   <div class="grid c3">
-    <div class="card glass sm"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></div><h3>Pay by card, no surcharge</h3><p>From 1 October 2026 card surcharges are banned in Australia. Transiqe never adds one, and because the fee is your bank's merchant rate, there's no third-party margin to absorb.</p></div>
+    <div class="card glass sm"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></div><h3>Pay by card, no surcharge</h3><p>From 1 October 2026 card surcharges are banned in Australia. Transiqe never adds one. The only card fee is the one on your own merchant facility, with your bank.</p></div>
     <div class="card glass sm"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Autopay on the due date</h3><p>Customers save a card once and choose when they're charged: on issue, on the due date, or a few days before. Retainers and repeating invoices just get paid.</p></div>
     <div class="card glass sm"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg></div><h3>Reconciled in Xero</h3><p>Every successful payment is recorded against its invoice in Xero within seconds, referenced with the bank transaction ID, so your bank feed matches first time.</p></div>
     <div class="card glass sm"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>A portal for every customer</h3><p>When a contact is created in Xero, their portal already exists. They sign in with an emailed link, see every invoice, pay, and manage their saved cards.</p></div>
@@ -168,18 +168,16 @@
 
 <section><div class="wrap split">
   <div class="fee glass">
-    <h3>What it costs to take $10,000 of card payments</h3>
-    <p class="muted small" style="margin-top:6px">Indicative only. Your bank rate depends on your facility; the comparison is with typical pay-by-link add-ons that charge their own percentage plus a per-transaction fee.</p>
-    <table>
-      <tr><td>Typical pay-by-link add-on at 1.75% + 30c, 40 invoices</td><td>$187</td></tr>
-      <tr><td>Your NAB Transact facility at 1.5%, settling to a NAB account</td><td>$150</td></tr>
-      <tr><td>Transiqe platform fee</td><td>from $29 / month</td></tr>
-      <tr><td><strong>And from 1 October 2026 you can't pass any of it on as a surcharge</strong>, so the rate you pay is the rate you keep.</td><td></td></tr>
-    </table>
+    <h3>What stays with your bank</h3>
+    <ul class="plain">
+      <li><b>The rate.</b> Card payments are processed on your own merchant facility, at the rate your bank agreed with you. Transiqe doesn't add a percentage, a per-transaction fee or a margin on top.</li>
+      <li><b>The money.</b> Settlement goes from your customer's card to your bank account on your bank's timetable. Transiqe never holds funds in between.</li>
+      <li><b>The relationship.</b> Your merchant agreement, your statements, your bank's support line. If you ever leave Transiqe, nothing about how you get paid changes.</li>
+    </ul>
   </div>
   <div>
-    <h2>Keep the bank's rate. Lose the middleman's.</h2>
-    <p class="lede" style="margin-top:16px">Payment-link services sit between you and your money, take a cut of every invoice and settle on their timetable. Transiqe is software: your merchant facility, your settlement, your rate, with the automation on top.</p>
+    <h2>One bank, one rate, no one in the middle.</h2>
+    <p class="lede" style="margin-top:16px">Most pay-by-card tools sit between you and your money. Transiqe is software that connects Xero to the merchant facility you already have with your bank, and puts the automation on top. The card fee is whatever your bank charges you, and nothing else.</p>
     <a class="btn primary" style="margin-top:24px" href="pricing.html">See pricing</a>
   </div>
 </div></section>

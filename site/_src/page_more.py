@@ -21,7 +21,7 @@ css = """<style>
 
 pricing = """
 <section class="pagehead"><div class="wrap"><h1>Software pricing. The card fee stays your bank's.</h1>
-<p class="lede" style="margin-top:18px">Transiqe charges a flat monthly fee for the automation. Your merchant facility is your own agreement with NAB, at NAB's rate, settling to your account. We never take a percentage of your invoices.</p></div></section>
+<p class="lede" style="margin-top:18px">Transiqe charges a flat monthly fee for the automation. Your merchant facility is your own agreement with your bank, at your bank's rate, settling to your account. We never take a percentage of your invoices.</p></div></section>
 <section style="padding-top:10px"><div class="wrap">
 <div class="plans">
   <div class="plan glass sm"><h3>Starter</h3><div class="price">$29 <small>/ month</small></div><p class="muted">For sole traders and small practices sending a handful of invoices a week.</p>
@@ -31,8 +31,8 @@ pricing = """
   <div class="plan glass sm"><h3>Multi-site</h3><div class="price">Let's talk</div><p class="muted">For groups with several Xero organisations or several merchant facilities.</p>
     <ul><li>Unlimited invoices</li><li>Several Xero organisations under one login</li><li>Several merchant facilities</li><li>Onboarding call and bookkeeper training</li><li>Direct line to the team</li></ul><a class="btn glassy block" href="mailto:hello@transiqe.com">Contact us</a></div>
 </div>
-<div class="note glass sm"><h3 style="margin-bottom:8px">What your bank charges, for comparison</h3>
-<p>NAB Transact, settling to a NAB business account, is currently $30 a month for up to $2,000 of card turnover, then 1.5% per transaction above that, with same-day settlement for transactions before 9:30pm. These are NAB's published rates and may change; confirm them with NAB when you apply. There is no Transiqe margin on top.</p></div>
+<div class="note glass sm"><h3 style="margin-bottom:8px">Your card fee stays with your bank</h3>
+<p>Transiqe is a flat software subscription. Card payments run on your own merchant facility under your own agreement with your bank, at the rate they give you, settling to your account. We don't take a percentage of your invoices and we don't add anything on top of your bank's fee.</p></div>
 </div></section>
 <section><div class="wrap">
   <div class="section-head"><h2>Getting set up, start to finish</h2></div>
