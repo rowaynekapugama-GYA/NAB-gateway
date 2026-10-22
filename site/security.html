@@ -1,0 +1,51 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security · Transiqe</title><meta name="description" content="Card numbers never reach Transiqe. Hosted bank payment page, encrypted credentials, minimal Xero permissions.">
+<link rel="icon" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Security · Transiqe"><meta property="og:description" content="Card numbers never reach Transiqe. Hosted bank payment page, encrypted credentials, minimal Xero permissions."><meta property="og:image" content="https://transiqe.com/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/transiqe.css"><style>
+.pagehead{padding:70px 0 30px}
+.pagehead h1{max-width:16ch;font-size:clamp(36px,5vw,60px)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+@media(max-width:900px){.plans{grid-template-columns:1fr}}
+.plan{padding:32px;display:grid;gap:14px;align-content:start}
+.plan .price{font:700 44px var(--font-display);letter-spacing:-.04em}
+.plan .price small{font:600 15px var(--font-body);color:var(--ink-3);letter-spacing:0}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:var(--ink-2);font-size:15px}
+.plan li::before{content:"✓ ";color:var(--cobalt);font-weight:800}
+.plan.hot{outline:2px solid rgba(59,91,255,.45);outline-offset:-2px}
+.note{padding:28px;margin-top:24px;color:var(--ink-2)}
+.timeline{display:grid;gap:12px;max-width:760px}
+.timeline .t{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 22px}
+.timeline .t b{font-family:var(--font-display);letter-spacing:-.02em}
+.sec{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:800px){.sec{grid-template-columns:1fr}}
+.feature-list{display:grid;gap:14px}
+.feature-list .row{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 22px}
+</style></head><body class=""><div class="ambient"><i></i></div>
+<header class="nav"><div class="bar glass pill strong">
+<a class="logo" href="index.html"><img src="assets/mark.svg" alt="">transiqe</a>
+<nav class="links"><a href="features.html" >Features</a><a href="customers.html" >For your customers</a><a href="pricing.html" >Pricing</a><a href="security.html" class="on">Security</a></nav>
+<div class="cta"><a class="btn glassy sm" href="login.html">Sign in</a><a class="btn primary sm" href="signup.html">Start free</a></div>
+</div></header>
+
+<section class="pagehead"><div class="wrap"><h1>Built so card numbers never reach us.</h1>
+<p class="lede" style="margin-top:18px">The design choice that matters most is the one you don't see: every card is entered on the bank's own hosted page. Everything else follows from that.</p></div></section>
+<section style="padding-top:10px"><div class="wrap grid c2">
+  <div class="card glass sm"><h3>Card data</h3><p>Customers type card details on NAB's hosted payment page. The bank returns a token for saved cards; Transiqe stores the token, the last four digits and the expiry, never the card number or security code. This keeps you and Transiqe in the lightest PCI DSS category.</p></div>
+  <div class="card glass sm"><h3>Your money</h3><p>Transiqe never holds funds. Card payments settle from your merchant facility to your bank account under your own agreement with NAB. If Transiqe disappeared tomorrow, your money would still be in your account.</p></div>
+  <div class="card glass sm"><h3>Credentials at rest</h3><p>Your gateway passwords and the Xero connection tokens are encrypted with AES-256-GCM before they're stored, and decrypted only in memory when a request to the bank or Xero is made.</p></div>
+  <div class="card glass sm"><h3>Xero access</h3><p>Transiqe asks for the minimum Xero permissions: read contacts and invoices, record payments. It never creates or edits invoices, and you can disconnect it from inside Xero at any time.</p></div>
+  <div class="card glass sm"><h3>Customer sign-in</h3><p>Customers sign in with single-use links that expire after seven days. There are no customer passwords to leak. Business logins use hashed passwords and expiring sessions.</p></div>
+  <div class="card glass sm"><h3>Tamper-proof amounts</h3><p>The amount charged always comes from the invoice as recorded from Xero, never from a link or a form field, so a modified link cannot underpay an invoice. Returns from the bank's page are signed and checked before anything is recorded.</p></div>
+</div></section>
+<section><div class="wrap"><div class="glass" style="padding:36px"><h3>Where things run</h3><p style="margin-top:8px;color:var(--ink-2);max-width:70ch">Transiqe runs on Australian cloud infrastructure with encrypted backups. An audit log records every connection change, payment, refund and autopay decision per business, and you can see every email we sent on your behalf in your outbox. Questions about a security review, or a disclosure to make? Write to <a href="mailto:security@transiqe.com">security@transiqe.com</a>.</p></div></div></section>
+<footer><div class="wrap"><div class="cols">
+<div><a class="logo" href="index.html" style="display:inline-flex;align-items:center;gap:8px;font:700 18px var(--font-display);color:var(--abyss);letter-spacing:-.03em"><img src="assets/mark.svg" width="24" alt="">transiqe</a>
+<p style="margin-top:10px;max-width:32ch">Card payments and autopay for Xero invoices, through your own bank. Built in Sydney for Australian small businesses.</p></div>
+<div><h4>Product</h4><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
+<div><h4>Account</h4><a href="login.html">Business sign in</a><a href="portal.html">Customer portal</a><a href="signup.html">Create an account</a></div>
+<div><h4>Company</h4><a href="mailto:hello@transiqe.com">hello@transiqe.com</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div><p class="tiny">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is not a bank and never holds your money: payments settle directly from your customer's card to your merchant account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited.</p></div></footer>
+</body></html>

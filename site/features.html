@@ -1,0 +1,155 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Features · Transiqe</title><meta name="description" content="Pay-by-card links, customer-controlled autopay, Xero write-back, customer portals and the emails, all handled.">
+<link rel="icon" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Features · Transiqe"><meta property="og:description" content="Pay-by-card links, customer-controlled autopay, Xero write-back, customer portals and the emails, all handled."><meta property="og:image" content="https://transiqe.com/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/transiqe.css"><style>
+.pagehead{padding:70px 0 20px}
+.pagehead h1{max-width:16ch;font-size:clamp(36px,5vw,60px)}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:40px 0}
+.feature:nth-child(even) .text{order:2}
+.feature .text h2{font-size:clamp(26px,3vw,36px)}
+.feature .text p{margin-top:14px;color:var(--ink-2);max-width:50ch;font-size:17px}
+.feature ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.feature li{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2)}
+.feature li::before{content:"";width:18px;height:18px;border-radius:50%;flex-shrink:0;margin-top:3px;background:linear-gradient(135deg,var(--cobalt),var(--lagoon));mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.6 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4-7.2 7.2z"/></svg>') center/contain no-repeat;-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="black" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.6 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4-7.2 7.2z"/></svg>') center/contain no-repeat}
+.feature .shot{padding:22px}
+@media(max-width:900px){.feature{grid-template-columns:1fr}.feature:nth-child(even) .text{order:0}}
+.mini{display:grid;gap:10px;padding:22px}
+.mini .row{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#fff;border-radius:14px;border:1px solid var(--glass-line);font-size:13.5px}
+.mini .row b{font-family:var(--font-display);letter-spacing:-.02em}
+.email{padding:22px}
+.email .msg{background:#fff;border-radius:16px;border:1px solid var(--glass-line);overflow:hidden;font-size:13px}
+.email .msg .hd{padding:12px 16px;background:linear-gradient(135deg,#0F766E,#13A89E);color:#fff;font-weight:700}
+.email .msg .bd{padding:16px}
+.email .msg .bd .b{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:999px;background:#0F766E;color:#fff;font-weight:700}
+</style></head><body class=""><div class="ambient"><i></i></div>
+<header class="nav"><div class="bar glass pill strong">
+<a class="logo" href="index.html"><img src="assets/mark.svg" alt="">transiqe</a>
+<nav class="links"><a href="features.html" class="on">Features</a><a href="customers.html" >For your customers</a><a href="pricing.html" >Pricing</a><a href="security.html" >Security</a></nav>
+<div class="cta"><a class="btn glassy sm" href="login.html">Sign in</a><a class="btn primary sm" href="signup.html">Start free</a></div>
+</div></header>
+
+<section class="pagehead"><div class="wrap">
+  <h1>Everything between the invoice and the bank, handled.</h1>
+  <p class="lede" style="margin-top:18px">Transiqe sits beside Xero and your merchant facility. These are the pieces it takes care of, in the order your customers meet them.</p>
+</div></section>
+
+<section style="padding-top:10px"><div class="wrap">
+
+<div class="feature">
+  <div class="text"><h2>A pay-by-card link on every invoice</h2><p>The moment an invoice is approved in Xero, Transiqe emails the customer a link that opens a branded pay page showing exactly what's due. Xero's own online invoice gets the same button, so customers who open the Xero email land in the same place.</p>
+  <ul><li>Works for invoices you type and invoices Xero generates from repeating templates</li><li>The amount always comes from Xero, never from the link, so it can't be tampered with</li><li>Your logo and colours, your business name on the statement</li></ul></div>
+  <div class="shot glass"><div class="screen" style="max-width:420px;margin:0 auto">
+  <div class="chrome"><i></i><i></i><i></i><div class="url">pay.transiqe.com/pay/k3v9…</div></div>
+  <div style="padding:22px 22px 18px">
+    <div style="font:700 15px var(--font-display);letter-spacing:-.02em;color:#0F766E;margin-bottom:12px">Northside Physio</div>
+    <div style="background:#fff;border:1px solid var(--glass-line);border-radius:16px;padding:14px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start"><div><div class="muted tiny">Invoice</div><b>INV-0238</b></div><div style="text-align:right"><div class="muted tiny">Due 25 Oct 2026</div><span class="badge blue">awaiting payment</span></div></div>
+      <table style="width:100%;margin-top:10px;font-size:12px;border-collapse:collapse">
+        <tr><td style="padding:5px 0">Follow-up consultation</td><td style="text-align:right">$95.00</td></tr>
+        <tr><td style="padding:5px 0">Exercise band</td><td style="text-align:right">$15.00</td></tr>
+        <tr><td style="padding:5px 0;color:var(--ink-3)">GST</td><td style="text-align:right;color:var(--ink-3)">$11.00</td></tr>
+        <tr><td style="padding:8px 0;border-top:1px solid var(--glass-line);font-weight:800">Amount due</td><td style="text-align:right;border-top:1px solid var(--glass-line);font-weight:800">$121.00</td></tr>
+      </table>
+    </div>
+    <label class="check" style="margin:14px 0 12px;font-size:12.5px"><input type="checkbox" checked> <span>Save this card securely with the bank and pay future invoices automatically on their due date.</span></label>
+    <div class="btn primary block">Pay $121.00</div>
+    <p class="tiny muted" style="text-align:center;margin-top:10px">You will be taken to NAB's secure page. No surcharge.</p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="feature">
+  <div class="text"><h2>Autopay the customer controls</h2><p>Customers tick one box while paying to save their card with the bank. From then on, new invoices are charged automatically, at the timing they choose, with a receipt every time. They can change the timing, swap the card or switch it off from the portal.</p>
+  <ul><li>Charge on issue, on the due date, or a set number of days before</li><li>Declines are retried every two days, up to three times, then both of you are told</li><li>Void an invoice in Xero and the scheduled charge is cancelled automatically</li></ul></div>
+  <div class="mini glass">
+    <div class="row"><span>Automatic payments</span><b style="color:#117A50">On</b></div>
+    <div class="row"><span>When to charge</span><b>On the due date</b></div>
+    <div class="row"><span>Card</span><b>Visa •••• 1111</b></div>
+    <div class="row"><span>Next charge</span><b>INV-0238 · 25 Oct · $121.00</b></div>
+    <div class="row"><span>Last receipt</span><b>INV-0226 · emailed</b></div>
+  </div>
+</div>
+
+<div class="feature">
+  <div class="text"><h2>Written back to Xero, reconciled</h2><p>Each successful card payment is recorded against its invoice in Xero within seconds, dated that day, referenced with the bank's transaction ID and posted to the account you choose. Your bank feed then matches one to one.</p>
+  <ul><li>Record to your bank account, or to a clearing account if your bank batches settlements</li><li>If Xero is unreachable, the payment is kept and the write-back retried until it lands; you're told if it can't</li><li>Refunds go back to the customer's card from the dashboard</li></ul></div>
+  <div class="shot glass"><div class="screen">
+  <div class="chrome"><i></i><i></i><i></i><div class="url">app.transiqe.com/app</div></div>
+  <div class="body">
+    <div class="side">
+      <div class="l"><img src="assets/mark.svg" alt="">transiqe</div>
+      <a class="on">Overview</a><a>Invoices</a><a>Customers</a><a>Payments</a><a>Autopay</a><a>Outbox</a><a>Settings</a>
+    </div>
+    <div class="main">
+      <h5>Northside Physio</h5>
+      <div class="stats">
+        <div class="stat"><b>$18,420</b><span>Collected by card this month</span></div>
+        <div class="stat"><b>$6,115</b><span>Outstanding, 9 invoices</span></div>
+        <div class="stat"><b>$1,386</b><span>Overdue, 2 invoices</span></div>
+        <div class="stat"><b>38 / 51</b><span>Customers on autopay</span></div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>When</th><th>Customer</th><th>Invoice</th><th class="r">Amount</th><th>Result</th><th>Xero</th></tr></thead>
+        <tbody>
+          <tr><td>Today, 9:02 am</td><td>Marcus Bell</td><td>INV-0231</td><td class="r">$594.00</td><td><span class="badge green">autopay</span></td><td><span class="badge green">recorded</span></td></tr>
+          <tr><td>Today, 8:40 am</td><td>Olive &amp; Co Pty Ltd</td><td>INV-0229</td><td class="r">$1,320.00</td><td><span class="badge green">paid by card</span></td><td><span class="badge green">recorded</span></td></tr>
+          <tr><td>Yesterday</td><td>Priya Sharma</td><td>INV-0226</td><td class="r">$121.00</td><td><span class="badge green">paid by card</span></td><td><span class="badge green">recorded</span></td></tr>
+          <tr><td>Yesterday</td><td>Dan Harker</td><td>INV-0224</td><td class="r">$66.00</td><td><span class="badge amber">retry Fri</span></td><td><span class="badge blue">open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="feature">
+  <div class="text"><h2>A portal for every customer, automatically</h2><p>Create a contact in Xero and their portal already exists. They sign in with an emailed link, see every open and paid invoice, pay what's due, and manage their saved cards and autopay. No account to set up, no password to reset.</p>
+  <ul><li>Branded with your name, logo and colour</li><li>Invite sent automatically when a contact has an email, or on demand from the dashboard</li><li>One person who deals with several businesses on Transiqe gets a portal for each</li></ul></div>
+  <div class="shot glass"><div class="screen">
+  <div class="chrome"><i></i><i></i><i></i><div class="url">pay.transiqe.com/portal</div></div>
+  <div class="ptop"><span>Northside Physio</span><nav><i class="on">Invoices</i><i>Payments</i><i>Autopay &amp; cards</i><i>Account</i></nav></div>
+  <div class="main" style="padding:18px 20px">
+    <h5 style="font:600 16px var(--font-display);margin:0 0 12px">Hi Priya</h5>
+    <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+      <div class="stat"><b>$132.00</b><span>Outstanding across 1 invoice</span></div>
+      <div class="stat"><b>On</b><span>Automatic payments · Visa •••• 1111</span></div>
+      <div class="stat"><b>Due date</b><span>When we charge your card</span></div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Invoice</th><th>Issued</th><th>Due</th><th class="r">Amount due</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>INV-0238<br><span class="muted">Follow-up consultation</span></td><td>18 Oct</td><td>25 Oct</td><td class="r">$132.00</td><td><span class="badge amber">auto-pay 25 Oct</span></td></tr>
+        <tr><td>INV-0226<br><span class="muted">Standard consultation</span></td><td>4 Oct</td><td>11 Oct</td><td class="r">$0.00</td><td><span class="badge green">paid</span></td></tr>
+        <tr><td>INV-0212<br><span class="muted">Initial consultation</span></td><td>20 Sep</td><td>27 Sep</td><td class="r">$0.00</td><td><span class="badge green">paid</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="feature">
+  <div class="text"><h2>The emails, done properly</h2><p>Pay links, portal invites, receipts and declined-payment notices all go out in your name and show in your outbox, so you can see what each customer received and when.</p>
+  <ul><li>Plain, short emails in your branding</li><li>Business alerts for anything that needs a human: a write-back that failed, autopay stopped after retries</li><li>Nothing goes out twice, even when Xero redelivers an event</li></ul></div>
+  <div class="email glass"><div class="msg"><div class="hd">Northside Physio</div><div class="bd">Hi Priya,<br><br>Invoice <b>INV-0238</b> for <b>$121.00</b> is due on 25 October.<br><span class="b">Pay by card</span><br><br><span class="muted">You can also view all your invoices and set up automatic payments in your customer portal.</span></div></div></div>
+</div>
+
+</div></section>
+
+<section><div class="wrap"><div class="cta-block glass" style="padding:48px;text-align:center;display:grid;justify-items:center;gap:16px">
+  <h2 style="text-align:center;max-width:20ch">See it running on your own invoices.</h2>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><a class="btn primary lg" href="signup.html">Start free</a><a class="btn glassy lg" href="pricing.html">Pricing</a></div>
+</div></div></section>
+<footer><div class="wrap"><div class="cols">
+<div><a class="logo" href="index.html" style="display:inline-flex;align-items:center;gap:8px;font:700 18px var(--font-display);color:var(--abyss);letter-spacing:-.03em"><img src="assets/mark.svg" width="24" alt="">transiqe</a>
+<p style="margin-top:10px;max-width:32ch">Card payments and autopay for Xero invoices, through your own bank. Built in Sydney for Australian small businesses.</p></div>
+<div><h4>Product</h4><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
+<div><h4>Account</h4><a href="login.html">Business sign in</a><a href="portal.html">Customer portal</a><a href="signup.html">Create an account</a></div>
+<div><h4>Company</h4><a href="mailto:hello@transiqe.com">hello@transiqe.com</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div><p class="tiny">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is not a bank and never holds your money: payments settle directly from your customer's card to your merchant account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited.</p></div></footer>
+</body></html>

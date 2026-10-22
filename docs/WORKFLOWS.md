@@ -1,4 +1,4 @@
-# PayBridge: workflows, decisions and open questions
+# Transiqe: workflows, decisions and open questions
 
 ## 1. The problem in one line
 
@@ -50,7 +50,7 @@ Flow: pay page shows the live amount due (always from our mirror, never from the
 - Changing the preference re-plans all open invoices. Removing the autopay card turns autopay off.
 
 ### 3.6 Write-back and reconciliation
-- A successful charge creates a Xero **Payment** against the invoice for the full amount, dated today, against a configurable account (default: a "NAB Transact Clearing" account; the business bank account also works). Reference is `PayBridge <gateway txn id>` so it is searchable.
+- A successful charge creates a Xero **Payment** against the invoice for the full amount, dated today, against a configurable account (default: a "NAB Transact Clearing" account; the business bank account also works). Reference is `Transiqe <gateway txn id>` so it is searchable.
 - Recommended bookkeeping: NAB settles gross to the bank and bills merchant fees separately, so recording at face value is correct. If NAB batches settlements, a clearing account makes the bank feed reconcile cleanly (one bank line vs one clearing-account transfer per settlement).
 - If write-back fails (Xero down, token revoked, invoice edited) the payment is still recorded here, the business is alerted, and the scheduler retries.
 - Refunds go to the card via the gateway; recording the refund in Xero is manual for now (overpayment/credit note handling is a later step).
@@ -91,7 +91,7 @@ Magic-link sign in (email a single-use 7-day link; no passwords). Pages: invoice
 
 ## 7. Open questions for you
 
-1. Product name and domain (PayBridge is a placeholder).
+1. Product name and domain (Transiqe is a placeholder).
 2. Pricing model for the platform (monthly per business, per-transaction cents, or tiered) since there is no margin on the card fee itself.
 3. Should the platform support gateways other than NAB later (e.g. CommBank, Westpac)? The adapter interface already allows it.
 4. Direct debit (bank account) as a second payment method through NAB? Common ask for larger recurring amounts.

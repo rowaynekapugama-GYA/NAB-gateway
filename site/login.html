@@ -1,0 +1,43 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in · Transiqe</title><meta name="description" content="Sign in to your Transiqe business account.">
+<link rel="icon" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Sign in · Transiqe"><meta property="og:description" content="Sign in to your Transiqe business account."><meta property="og:image" content="https://transiqe.com/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/transiqe.css"><style>
+.auth{min-height:calc(100vh - 80px);display:grid;place-items:center;padding:40px 0}
+.auth .box{width:min(440px,100%);padding:36px}
+.auth .box h2{font-size:28px;margin-bottom:6px;max-width:none}
+.auth .box .sub{color:var(--ink-2);margin-bottom:24px}
+.auth .logo{display:inline-flex;align-items:center;gap:10px;font:700 22px var(--font-display);letter-spacing:-.04em;color:var(--abyss);text-decoration:none;margin-bottom:26px}
+.auth .logo img{width:34px}
+.auth .alt{margin-top:18px;font-size:14px;color:var(--ink-3);text-align:center}
+.auth .or{display:flex;align-items:center;gap:12px;color:var(--ink-3);font-size:13px;margin:16px 0}
+.auth .or::before,.auth .or::after{content:"";flex:1;height:1px;background:var(--glass-line)}
+.demo{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(59,91,255,.08);font-size:13px;color:var(--ink-2)}
+</style></head><body class=""><div class="ambient"><i></i></div>
+<header class="nav"><div class="bar glass pill strong">
+<a class="logo" href="index.html"><img src="assets/mark.svg" alt="">transiqe</a>
+<nav class="links"><a href="features.html" >Features</a><a href="customers.html" >For your customers</a><a href="pricing.html" >Pricing</a><a href="security.html" >Security</a></nav>
+<div class="cta"><a class="btn glassy sm" href="login.html">Sign in</a><a class="btn primary sm" href="signup.html">Start free</a></div>
+</div></header>
+<main class="auth"><div class="wrap" style="display:grid;justify-items:center"><div class="box glass strong">
+  <a class="logo" href="index.html"><img src="assets/mark.svg" alt="">transiqe</a>
+  <h2>Sign in to your business</h2><p class="sub">Your dashboard, invoices, customers and autopay.</p>
+  <form action="https://app.transiqe.com/login" method="post">
+    <label class="field"><span>Work email</span><input type="email" name="email" placeholder="you@yourbusiness.com.au" autocomplete="email" required></label>
+    <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required></label>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 18px"><label class="check" style="font-size:13.5px"><input type="checkbox" name="remember"> <span>Keep me signed in</span></label><a href="#" class="small">Forgot password?</a></div>
+    <button class="btn primary block lg">Sign in</button>
+  </form>
+  <div class="or">or</div>
+  <a class="btn glassy block" href="portal.html">I'm a customer paying an invoice</a>
+  <p class="alt">New to Transiqe? <a href="signup.html">Create a business account</a></p>
+</div></div></main><footer><div class="wrap"><div class="cols">
+<div><a class="logo" href="index.html" style="display:inline-flex;align-items:center;gap:8px;font:700 18px var(--font-display);color:var(--abyss);letter-spacing:-.03em"><img src="assets/mark.svg" width="24" alt="">transiqe</a>
+<p style="margin-top:10px;max-width:32ch">Card payments and autopay for Xero invoices, through your own bank. Built in Sydney for Australian small businesses.</p></div>
+<div><h4>Product</h4><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
+<div><h4>Account</h4><a href="login.html">Business sign in</a><a href="portal.html">Customer portal</a><a href="signup.html">Create an account</a></div>
+<div><h4>Company</h4><a href="mailto:hello@transiqe.com">hello@transiqe.com</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+</div><p class="tiny">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is not a bank and never holds your money: payments settle directly from your customer's card to your merchant account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited.</p></div></footer>
+</body></html>

@@ -43,7 +43,7 @@ async function tick() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (process.env.AUTO_SEED === '1' || (config.mode !== 'live' && process.env.AUTO_SEED !== '0')) {
-    if (await seedDemo()) console.log('Demo data seeded (demo@paybridge.local / demo1234)');
+    if (await seedDemo()) console.log('Demo data seeded (demo@transiqe.local / demo1234)');
   }
   app.listen(config.port, () => {
     console.log(`${config.appName} running in ${config.mode} mode at ${config.baseUrl}`);

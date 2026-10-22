@@ -22,7 +22,7 @@ export function flashHtml(flash) {
 
 const head = (title, brand) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · ${esc(config.appName)}</title>
-<link rel="stylesheet" href="/style.css">${brand ? `<style>:root{--brand:${esc(brand)}}</style>` : ''}</head>`;
+<link rel="icon" href="/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css">${brand ? `<style>:root{--brand:${esc(brand)}}</style>` : ''}</head>`;
 
 const demoBanner = () => (isDemo() ? `<div class="demo-banner">Demo mode: Xero and the NAB gateway are simulated. Open the <a href="/sim">Xero simulator</a> to create contacts and invoices.</div>` : '');
 

@@ -10,15 +10,15 @@ export const config = {
   mode: env.APP_MODE || 'demo',
   port: Number(env.PORT || 3000),
   baseUrl: env.BASE_URL || `http://localhost:${env.PORT || 3000}`,
-  appName: env.APP_NAME || 'PayBridge',
-  dbPath: env.DB_PATH || './data/paybridge.db',
+  appName: env.APP_NAME || 'Transiqe',
+  dbPath: env.DB_PATH || './data/transiqe.db',
 
   // 32+ char secret. Used for session signing and AES-256-GCM encryption of
   // gateway credentials and Xero refresh tokens at rest.
   appSecret: env.APP_SECRET || 'demo-only-secret-change-me-before-live-use-0000',
 
   // Platform admin login (super admin across all tenants)
-  adminEmail: env.ADMIN_EMAIL || 'admin@paybridge.local',
+  adminEmail: env.ADMIN_EMAIL || 'admin@transiqe.local',
   adminPassword: env.ADMIN_PASSWORD || 'admin1234',
 
   xero: {

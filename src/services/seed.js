@@ -7,7 +7,7 @@ import { xeroMock } from '../providers/index.js';
 import { ingestXeroEvents } from './webhooks.js';
 import { savePaymentMethod } from './payments.js';
 
-export const DEMO_EMAIL = 'demo@paybridge.local';
+export const DEMO_EMAIL = 'demo@transiqe.local';
 export const DEMO_PASSWORD = 'demo1234';
 
 export async function seedDemo() {

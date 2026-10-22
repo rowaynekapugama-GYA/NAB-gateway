@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
       <p>Connect Xero and your NAB gateway once. Every invoice gets a Pay-by-card link, every customer gets a portal, and customers who switch on autopay are charged automatically when their Xero invoices fall due. Payments are written back to Xero so reconciliation is automatic.</p>
       <div class="row" style="margin-top:14px"><a class="btn" href="/signup">Create a business account</a><a class="btn secondary" href="/login">Sign in</a><a class="btn secondary" href="/portal">Customer portal</a></div>
     </div>
-    ${isDemo() ? `<div class="card"><h3>Demo accounts</h3><p class="small">Run <code>npm run seed</code> to create <strong>demo@paybridge.local / demo1234</strong> (a business with sample customers and invoices). Platform admin: <strong>${esc(config.adminEmail)} / ${esc(config.adminPassword)}</strong> at <a href="/admin">/admin</a>.</p></div>` : ''}`,
+    ${isDemo() ? `<div class="card"><h3>Demo accounts</h3><p class="small">Run <code>npm run seed</code> to create <strong>demo@transiqe.local / demo1234</strong> (a business with sample customers and invoices). Platform admin: <strong>${esc(config.adminEmail)} / ${esc(config.adminPassword)}</strong> at <a href="/admin">/admin</a>.</p></div>` : ''}`,
   }));
 });
 

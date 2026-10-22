@@ -1,4 +1,4 @@
-# PayBridge (working name)
+# Transiqe
 
 Bridge between Xero and a business's own NAB merchant facility. Any small business signs up, connects Xero, enters their NAB gateway credentials, and from then on:
 
@@ -22,7 +22,7 @@ To put the demo online without installing anything, use the **Deploy to Render**
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/rowaynekapugama-GYA/NAB-gateway)
 
-Sign in at `/login` with **demo@paybridge.local / demo1234**. Platform admin is at `/admin` (admin@paybridge.local / admin1234).
+Sign in at `/login` with **demo@transiqe.local / demo1234**. Platform admin is at `/admin` (admin@transiqe.local / admin1234).
 
 In demo mode Xero and NAB are simulated in-process:
 

@@ -1,7 +1,7 @@
 {
-  "name": "paybridge",
+  "name": "transiqe",
   "version": "0.1.0",
-  "description": "Xero to NAB card payments bridge with customer portal and autopay (working name: PayBridge)",
+  "description": "Xero to NAB card payments bridge with customer portal and autopay (working name: Transiqe)",
   "type": "module",
   "private": true,
   "engines": { "node": ">=22.13" },

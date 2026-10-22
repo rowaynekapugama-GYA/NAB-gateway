@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 200" width="820" height="200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F6BFF"/><stop offset="0.55" stop-color="#3B5BFF"/><stop offset="1" stop-color="#19C6C0"/></linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <g transform="translate(0 12) scale(0.6875)">
+    <rect x="8" y="8" width="240" height="240" rx="64" fill="url(#g)"/>
+    <rect x="8" y="8" width="240" height="240" rx="64" fill="url(#gloss)"/>
+    <path d="M128 58 L128 168 C128 196 152 208 180 198" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/>
+    <path d="M60 114 L174 114 C192 114 204 106 214 92" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" opacity="0.95"/>
+  </g>
+  <text x="200" y="134" font-family="Sora, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" font-size="118" letter-spacing="-5" fill="#0B1026">transiqe</text>
+</svg>

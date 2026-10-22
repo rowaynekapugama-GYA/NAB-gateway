@@ -24,7 +24,7 @@ const pick = (text, re) => (text.match(re) || [])[1];
 
 const biz = new Jar();
 console.log('1. Business sign-in');
-let r = await req(biz, '/login', { method: 'POST', form: { email: 'demo@paybridge.local', password: 'demo1234' } });
+let r = await req(biz, '/login', { method: 'POST', form: { email: 'demo@transiqe.local', password: 'demo1234' } });
 check('login lands on overview', r.url.endsWith('/app') && r.text.includes('Northside Physio'));
 check('setup shows Xero + gateway connected', (r.text.match(/step done/g) || []).length >= 2);
 
@@ -66,7 +66,7 @@ r = await req(biz, `/app/invoices/${invId}`);
 check('invoice now PAID locally', r.text.includes('>PAID<'));
 check('payment written back to Xero', r.text.includes('>done<'));
 r = await req(biz, '/sim');
-check('Xero simulator shows the payment recorded', r.text.includes('PayBridge MOCK'));
+check('Xero simulator shows the payment recorded', r.text.includes('Transiqe MOCK'));
 r = await req(biz, '/app/outbox');
 check('receipt emailed', r.text.includes('receipt'));
 
@@ -140,7 +140,7 @@ check('settings saved', r.text.includes('Settings saved'));
 r = await req(biz, '/app/activity');
 check('activity shows audit + webhooks', r.text.includes('payment.succeeded') && r.text.includes('INVOICE/CREATE'));
 const admin = new Jar();
-r = await req(admin, '/admin/login', { method: 'POST', form: { email: 'admin@paybridge.local', password: 'admin1234' } });
+r = await req(admin, '/admin/login', { method: 'POST', form: { email: 'admin@transiqe.local', password: 'admin1234' } });
 check('admin dashboard lists business', r.text.includes('Northside Physio') && r.text.includes('Businesses'));
 
 console.log('10. New business signup flow');

@@ -58,7 +58,7 @@ router.get('/pay/:token', (req, res) => {
   const canSave = s.autopay_allowed && !!customer;
   res.send(plainPage({
     title: `Pay invoice ${invoice.number}`, brand: business.brand_colour, flash: req.flash, body: `
-    <div class="brand-mark">${business.logo_url ? `<img src="${esc(business.logo_url)}" alt="" style="height:32px;vertical-align:middle"> ` : ''}${esc(business.name)}</div>
+    <div class="brand-mark" data-biz>${business.logo_url ? `<img src="${esc(business.logo_url)}" alt="" style="height:32px;vertical-align:middle"> ` : ''}${esc(business.name)}</div>
     ${invoiceCard(business, invoice, customer)}
     ${payable ? (gw ? `<div class="card"><h3>Pay by card</h3>
       <form method="post" action="/pay/${invoice.pay_token}/start">
@@ -137,7 +137,7 @@ router.get('/pay/:token/done', (req, res) => {
   const p = get('SELECT * FROM payments WHERE invoice_id=? AND gateway_txn_id=?', [invoice.id, req.query.txn]) || get("SELECT * FROM payments WHERE invoice_id=? AND status='succeeded' ORDER BY id DESC", [invoice.id]);
   res.send(plainPage({
     title: 'Payment received', brand: business.brand_colour, body: `
-    <div class="brand-mark">${esc(business.name)}</div>
+    <div class="brand-mark" data-biz>${esc(business.name)}</div>
     <div class="card"><h2>Thank you, your payment went through</h2>
       <dl class="kv"><dt>Invoice</dt><dd>${esc(invoice.number)}</dd><dt>Amount</dt><dd>${money(p?.amount, invoice.currency)}</dd><dt>Reference</dt><dd class="mono">${esc(p?.gateway_txn_id || '')}</dd><dt>Receipt</dt><dd>${customer?.email ? `emailed to ${esc(customer.email)}` : 'available in your portal'}</dd></dl>
       ${customer?.autopay_enabled ? `<div class="notice">Automatic payments are on. Future invoices from ${esc(business.name)} will be charged to your saved card on their due date, and you will get a receipt each time.</div>` : ''}
