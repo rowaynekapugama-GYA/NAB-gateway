@@ -1,0 +1,23 @@
+# One-click deploy to Render (free tier is fine for the demo).
+services:
+  - type: web
+    name: nab-gateway-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: APP_MODE
+        value: demo
+      - key: AUTO_SEED
+        value: "1"
+      - key: APP_SECRET
+        generateValue: true
+      - key: JOB_TOKEN
+        generateValue: true
+      - key: BASE_URL
+        fromService:
+          type: web
+          name: nab-gateway-demo
+          envVarKey: RENDER_EXTERNAL_URL

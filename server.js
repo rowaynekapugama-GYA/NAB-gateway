@@ -12,6 +12,7 @@ import { router as simRoutes } from './src/routes/sim.js';
 import { router as webhookRoutes } from './src/routes/webhooks.js';
 import { router as adminRoutes } from './src/routes/admin.js';
 import { retryWritebacks, runAutopay } from './src/services/payments.js';
+import { seedDemo } from './src/services/seed.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 export const app = express();
@@ -41,6 +42,9 @@ async function tick() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  if (process.env.AUTO_SEED === '1' || (config.mode !== 'live' && process.env.AUTO_SEED !== '0')) {
+    if (await seedDemo()) console.log('Demo data seeded (demo@paybridge.local / demo1234)');
+  }
   app.listen(config.port, () => {
     console.log(`${config.appName} running in ${config.mode} mode at ${config.baseUrl}`);
     setInterval(tick, config.jobIntervalMs).unref();

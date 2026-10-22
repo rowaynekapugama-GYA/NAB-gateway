@@ -14,10 +14,13 @@ Funds settle straight to the business's NAB account. The platform never sees car
 
 ```bash
 npm install
-npm run seed      # creates a demo business with customers and invoices
-npm run dev       # http://localhost:3000
+npm run dev       # http://localhost:3000  (demo data is seeded automatically on first start)
 npm run smoke     # optional: scripted end-to-end test of every workflow (server must be running)
 ```
+
+To put the demo online without installing anything, use the **Deploy to Render** button (free tier, uses `render.yaml`):
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/rowaynekapugama-GYA/NAB-gateway)
 
 Sign in at `/login` with **demo@paybridge.local / demo1234**. Platform admin is at `/admin` (admin@paybridge.local / admin1234).
 
