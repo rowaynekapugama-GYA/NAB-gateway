@@ -1,0 +1,18 @@
+{
+  "name": "paybridge",
+  "version": "0.1.0",
+  "description": "Xero to NAB card payments bridge with customer portal and autopay (working name: PayBridge)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "dev": "node --no-warnings --watch server.js",
+    "start": "node --no-warnings server.js",
+    "seed": "node --no-warnings scripts/seed.js",
+    "reset": "node --no-warnings scripts/reset.js",
+    "smoke": "node --no-warnings scripts/smoke.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
