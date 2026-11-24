@@ -60,14 +60,14 @@ def footer():
 </div>
 <p class="fine">Transiqe is a product of {ENTITY}, ABN {ABN}. Transiqe is software. It is not a bank or a payment processor and never holds your money: card payments are processed by NAB under your own merchant agreement and settle to your account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited. Transiqe is not affiliated with or endorsed by either company.</p>
 </div></footer>
-<script>(function(){{var b=document.getElementById('menu-btn'),m=document.getElementById('mobile-menu');if(!b||!m)return;b.addEventListener('click',function(){{var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');}});}})();</script>'''
+<script src="js/site.js" defer></script>'''
 
 
-def hero(mode, active, inner, img=None, cls='', pos='center'):
+def hero(mode, active, inner, img=None, cls='', pos='center', flip=False):
     """Rounded photo panel with the navigation inside it."""
     pic = ''
     if img:
-        pic = (f'<picture><source type="image/webp" media="(max-width:700px)" srcset="assets/img/{img}-900.webp">'
+        pic = (f'<picture{" class=" + chr(34) + "flip" + chr(34) if flip else ""}><source type="image/webp" media="(max-width:700px)" srcset="assets/img/{img}-900.webp">'
                f'<source type="image/webp" srcset="assets/img/{img}.webp">'
                f'<img src="assets/img/{img}.jpg" alt="" style="object-position:{pos}" fetchpriority="high"></picture>')
     return f'<div class="shell"><section class="panel {cls}">{pic}<div class="inner">{nav("on-image", active)}{inner}</div></section></div>'

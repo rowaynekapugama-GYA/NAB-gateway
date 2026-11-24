@@ -131,7 +131,7 @@ SCREEN_CONNECT = '''<div class="screen phone">
 
 SAMPLE_NOTE = '<p class="tiny muted" style="margin-top:14px">Screens are illustrative and show sample data.</p>'
 
-CLOSER = f'''<section class="band tight"><div class="wrap"><div class="closer">
+CLOSER = f'''<section class="band tight"><div class="wrap"><div class="closer has-img"><img class="bg" src="assets/img/light-warm.jpg" alt="" loading="lazy">
   <h2>Connect Xero and your NAB Gateway. Take your first card payment this week.</h2>
   <p>Free while you set up. Your invoices keep going out of Xero exactly as they do today.</p>
   <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ink lg" href="{APP}/signup">Start free <span class="arr">&rarr;</span></a><a class="btn white lg" href="mailto:hello@transiqe.com">Talk to us</a></div>
@@ -152,3 +152,40 @@ PLANS = f'''<div class="plans">
     <a class="btn line" href="mailto:hello@transiqe.com">Talk to us</a></div>
 </div>
 <p class="small muted" style="margin-top:16px">Prices are in Australian dollars. Card fees are charged by NAB under your own merchant agreement and are not part of your Transiqe subscription.</p>'''
+
+# ---------------------------------------------------------------- banner graphics
+# Floating interface cards shown on the right of each banner. Decorative: aria-hidden.
+def fl(inner, pos, n=0, d=14, rot=0, dur=7, c=''):
+    return f'<div class="fl {c}" style="{pos};--n:{n};--d:{d};--rot:{rot}deg;--dur:{dur}s">{inner}</div>'
+
+ART_FEATURES = '<div class="art" aria-hidden="true">' + ''.join([
+    fl('<div class="glass mini"><div class="who">Northside Physio</div><div class="tiny muted">Invoice INV-0238</div><div class="amt num">$121.00</div><div class="btn cobalt block sm">Pay now</div></div>', 'left:8%;top:6%', 0, 10, -4, 8, 'fa'),
+    fl('<div class="glass chipx"><span class="toggle"></span><span>Autopay<small>Customer opted in</small></span></div>', 'right:2%;top:2%', 1, 22, 3, 6.5, 'fb'),
+    fl('<div class="chipx dark"><span class="dotok"></span><span>Marked paid in Xero<small>INV-0238, just now</small></span></div>', 'right:0;top:46%', 2, 30, -2, 7.5, 'fc'),
+    fl('<div class="chipx warm"><span>Reminder sent<small>INV-0224, 2 days overdue</small></span></div>', 'left:0;bottom:4%', 3, 18, 2, 9, 'fd'),
+]) + '</div>'
+
+ART_HOW = ('<div class="art" aria-hidden="true"><div class="flowcol"><i class="pk"></i>'
+    '<div class="glass chipx" style="--k:0"><span>Xero invoice<small>Sent to your customer</small></span></div>'
+    '<div class="glass chipx" style="--k:1;margin-left:26px"><span>Pay now<small>Customer pays by card</small></span></div>'
+    '<div class="chipx warm" style="--k:2;margin-left:52px"><span>Your NAB Gateway<small>At your agreed NAB rate</small></span></div>'
+    '<div class="glass chipx" style="--k:3;margin-left:26px"><span>Your NAB account<small>Paid to you directly</small></span></div>'
+    '<div class="chipx dark" style="--k:4"><span class="dotok"></span><span>Marked paid in Xero</span></div>'
+    '</div></div>')
+
+ART_PRICING = '<div class="art" aria-hidden="true">' + ''.join([
+    fl('<div class="glass mini"><div class="who">Starter</div><div class="amt num">$49.95</div><div class="tiny muted">per month, up to 100 invoices</div></div>', 'left:4%;top:8%', 0, 12, -5, 8, 'pa'),
+    fl('<div class="chipx dark" style="display:block;padding:16px;width:230px;white-space:normal"><div style="font:600 13.5px var(--display)">Growth</div><div class="num" style="font:500 28px/1 var(--display);letter-spacing:-.04em;margin:10px 0">$99</div><small>per month, up to 1,000 invoices</small></div>', 'right:2%;top:30%', 1, 24, 4, 7, 'pb'),
+    fl('<div class="chipx warm"><span>0% of your invoices<small>A flat price for the software</small></span></div>', 'left:14%;bottom:2%', 2, 32, -2, 9, 'pc'),
+]) + '</div>'
+
+ART_SECURITY = '<div class="art" aria-hidden="true">' + ''.join([
+    fl('<div class="chipx dark"><span class="dotok"></span><span>Card fields by NAB Gateway</span></div>', 'right:4%;top:14%', 0, 14, 2, 8),
+    fl('<div class="chipx dark"><span class="dotok"></span><span>Tokens stored, not card numbers</span></div>', 'right:16%;top:42%', 1, 22, -2, 7),
+    fl('<div class="chipx dark"><span class="dotok"></span><span>Funds never held by Transiqe</span></div>', 'right:0;top:70%', 2, 30, 1, 9),
+]) + '</div>'
+
+ART_CUSTOMERS = '<div class="art" aria-hidden="true">' + ''.join([
+    fl('<div class="glass chipx"><span class="dotok"></span><span>Payment received<small>Receipt sent to Priya</small></span></div>', 'right:2%;bottom:8%', 0, 20, -2, 7),
+    fl('<div class="glass chipx"><span class="toggle"></span><span>Autopay<small>On, until you turn it off</small></span></div>', 'right:22%;bottom:38%', 1, 30, 3, 8.5),
+]) + '</div>'

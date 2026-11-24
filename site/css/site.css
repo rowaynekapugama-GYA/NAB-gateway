@@ -349,3 +349,113 @@ footer .fine{max-width:96ch;line-height:1.6;font-size:12.5px}
 .trio .stage{min-height:470px;display:grid;place-items:center}
 .trio .stage>*{width:100%}
 @media(max-width:980px){.trio .stage{min-height:0}}
+
+/* =====================================================================
+   Motion. Only applies when the visitor has not asked for reduced motion.
+   ===================================================================== */
+/* compact bar that slides in after the hero */
+.dock{position:fixed;left:0;right:0;top:0;z-index:40;padding:10px max(12px,env(safe-area-inset-right,0px)) 0 max(12px,env(safe-area-inset-left,0px));transform:translateY(-130%);transition:transform .45s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.dock.show{transform:none;pointer-events:auto}
+.dock .nav{max-width:var(--wrap);margin:0 auto;background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1px solid var(--line-2);box-shadow:var(--shadow-sm)}
+.dock .nav .links a:hover,.dock .nav .links a[aria-current="page"]{background:var(--oat)}
+
+/* banner images sit slightly oversized so parallax never shows an edge */
+.panel>picture img,.panel>img.bg,.tile.photo img,.closer>img.bg{scale:1.14;will-change:translate}
+.panel>picture.flip img{transform:scaleX(-1)}
+
+/* floating interface cards in banners */
+.art{position:relative;height:clamp(300px,30vw,400px);align-self:center;min-width:0}
+.art .fl{position:absolute;translate:calc(var(--mx,0)*var(--d,14)*-1px) calc(var(--my,0)*var(--d,14)*-1px);transition:translate .5s cubic-bezier(.2,.7,.2,1)}
+.art .fl>*{rotate:var(--rot,0deg)}
+.mini{padding:16px;width:240px;font-size:13px}
+.mini .who{font:600 13.5px/1.2 var(--display);letter-spacing:-.02em}
+.mini .amt{font:500 28px/1 var(--display);letter-spacing:-.04em;margin:10px 0 12px}
+.chipx{display:flex;align-items:center;gap:10px;padding:12px 16px;font:700 13.5px/1.25 var(--body);white-space:nowrap;border-radius:var(--r-md)}
+.chipx small{display:block;font-weight:500;font-size:12px;color:var(--ink-3)}
+.chipx.dark{background:rgba(21,23,31,.86);color:#fff;border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.chipx.dark small{color:rgba(255,255,255,.62)}
+.chipx.warm{background:linear-gradient(135deg,var(--apricot),var(--ember));color:#2a1206;box-shadow:var(--shadow)}
+.chipx.warm small{color:rgba(42,18,6,.7)}
+.dotok{width:20px;height:20px;border-radius:50%;flex:none;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.toggle{width:38px;height:22px;border-radius:999px;background:var(--mint);position:relative;flex:none}
+.toggle::after{content:"";position:absolute;right:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff}
+.flowcol{position:absolute;inset:0;display:grid;align-content:center;gap:12px;padding-left:34px}
+.flowcol::before{content:"";position:absolute;left:12px;top:12%;bottom:12%;width:2px;background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.5),rgba(255,255,255,.1))}
+.flowcol .pk{position:absolute;left:6px;top:12%;width:14px;height:14px;border-radius:50%;background:var(--apricot);box-shadow:0 0 0 6px rgba(255,192,138,.25),0 0 24px 4px rgba(255,160,90,.6)}
+.flowcol .chipx{width:max-content;max-width:100%}
+.subhero .hero-grid.with-art{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center}
+@media(max-width:940px){.subhero .hero-grid.with-art{grid-template-columns:1fr}.art{height:300px;margin-top:8px}}
+@media(max-width:480px){.art{height:280px}.mini{width:210px}}
+
+/* the payment travelling along each route on the home page */
+.route .track{position:relative;padding-bottom:28px}
+.rail{position:absolute;left:6px;right:6px;bottom:9px;height:2px;border-radius:2px;background:currentColor;opacity:.2}
+.route.usual .rail{background:repeating-linear-gradient(90deg,currentColor 0 8px,transparent 8px 15px)}
+.coin{position:absolute;bottom:3px;left:0;width:14px;height:14px;border-radius:50%;background:var(--ink-3);box-shadow:0 0 0 5px rgba(139,140,150,.2)}
+.route.ours .coin{background:var(--apricot);box-shadow:0 0 0 5px rgba(255,192,138,.25),0 0 18px 2px rgba(255,160,90,.55);left:calc(100% - 14px)}
+@media(max-width:860px){.rail,.coin{display:none}.route .track{padding-bottom:0}}
+
+.closer{position:relative;overflow:hidden;isolation:isolate}
+.closer>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;mix-blend-mode:normal}
+.closer.has-img{background:#7a3215}
+.closer.has-img::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,rgba(255,228,199,.94) 0%,rgba(255,192,138,.86) 34%,rgba(244,112,62,.74) 72%,rgba(196,68,30,.6) 100%)}
+
+@media(prefers-reduced-motion:no-preference){
+  /* entrance of the banner on page load */
+  .panel .hero-grid .copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .panel .hero-grid .copy>*:nth-child(1){animation-delay:.05s}.panel .hero-grid .copy>*:nth-child(2){animation-delay:.14s}
+  .panel .hero-grid .copy>*:nth-child(3){animation-delay:.24s}.panel .hero-grid .copy>*:nth-child(4){animation-delay:.34s}
+  .panel .hero-grid .copy>*:nth-child(5){animation-delay:.44s}
+  .panel .hero-grid .paycard{animation:arrive 1s cubic-bezier(.2,.7,.2,1) .4s both}
+  .art .fl{animation:arrive .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.35s + var(--n,0)*.13s)}
+  .art .fl>*{animation:bob var(--dur,7s) ease-in-out infinite;animation-delay:calc(var(--n,0)*-1.3s)}
+  .panel>picture img,.panel>img.bg{animation:settle 1.6s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
+  @keyframes arrive{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+  @keyframes settle{from{opacity:.4;filter:blur(10px)}to{opacity:1;filter:blur(0)}}
+  @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -12px}}
+
+  /* scroll reveals (the .fx class is added by site.js) */
+  .fx [data-fx]{opacity:0;transition:opacity .85s cubic-bezier(.2,.7,.2,1),translate .85s cubic-bezier(.2,.7,.2,1),scale .85s cubic-bezier(.2,.7,.2,1),filter .85s;transition-delay:calc(var(--i,0)*85ms)}
+  .fx [data-fx="up"]{translate:0 30px}
+  .fx [data-fx="scale"]{scale:.95;translate:0 18px}
+  .fx [data-fx="left"]{translate:-40px 0}
+  .fx [data-fx="right"]{translate:40px 0}
+  .fx [data-fx].in{opacity:1;translate:0 0;scale:1}
+
+  /* the payment on its way */
+  .route.ours .coin{animation:run 4.4s cubic-bezier(.5,0,.2,1) infinite}
+  .route.usual .coin{animation:stall 8.8s ease-in-out infinite}
+  @keyframes run{0%{left:0;opacity:0}8%{opacity:1}78%{left:calc(100% - 14px);opacity:1}90%,100%{left:calc(100% - 14px);opacity:0}}
+  @keyframes stall{0%{left:0;opacity:0;scale:1}5%{opacity:1}20%,30%{left:calc(50% - 7px);scale:1}62%{left:calc(50% - 7px);scale:.6}80%{left:calc(100% - 14px);scale:.6;opacity:1}92%,100%{left:calc(100% - 14px);scale:.6;opacity:0}}
+  .flowcol .pk{animation:drop 5s cubic-bezier(.5,0,.2,1) infinite}
+  @keyframes drop{0%{top:12%;opacity:0}8%{opacity:1}80%{top:calc(88% - 14px);opacity:1}92%,100%{top:calc(88% - 14px);opacity:0}}
+  .flowcol .chipx{animation:pulse 5s ease-in-out infinite;animation-delay:calc(var(--k,0)*.82s)}
+  @keyframes pulse{0%,12%{scale:1.04}22%,100%{scale:1}}
+
+  /* each step lights up in turn once the strip is on screen */
+  .journey.in>div{animation:glow 9s ease-in-out infinite}
+  .journey.in>div:nth-child(2){animation-delay:1.6s}.journey.in>div:nth-child(3){animation-delay:3.2s}
+  .journey.in>div:nth-child(4){animation-delay:4.8s}.journey.in>div:nth-child(5){animation-delay:6.4s}
+  @keyframes glow{0%,14%{background:var(--oat)}22%,100%{background:transparent}}
+
+  .closer>img.bg{animation:drift 26s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:translateX(-2%)}to{transform:translateX(2%)}}
+  .screen,.mail{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+  .stage:hover .screen,.stage:hover .mail{transform:translateY(-6px)}
+  .tile{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .bento .tile:hover,.grid>.tile:hover{transform:translateY(-4px)}
+}
+
+/* banner graphics rearranged for narrow screens so the cards never collide */
+@media(max-width:940px){
+  .panel.cool::before{background:linear-gradient(180deg,rgba(8,12,30,.80) 0%,rgba(8,12,30,.72) 55%,rgba(8,12,30,.55) 100%)}
+  .art{height:340px;max-width:440px}
+  .art .fa{left:0!important;top:76px!important}
+  .art .fb{right:0!important;top:0!important}
+  .art .fc{right:0!important;top:auto!important;bottom:0!important}
+  .art .fd{display:none}
+  .art .pa{left:0!important;top:0!important}
+  .art .pb{right:0!important;top:138px!important}
+  .art .pc{left:0!important;bottom:0!important}
+}

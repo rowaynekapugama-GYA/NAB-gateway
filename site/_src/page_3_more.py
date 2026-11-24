@@ -4,13 +4,13 @@ def frow(title, text, visual, checks=()):
     cl = f'<ul class="checks">{cl}</ul>' if cl else ''
     return f'<div class="rowx"><div class="txt"><h3>{title}</h3><p>{text}</p>{cl}</div><div class="vis">{visual}</div></div>'
 
-feat_hero = '''<div class="hero-grid"><div class="copy">
+feat_hero = '''<div class="hero-grid with-art"><div class="copy">
   <span class="tag">Features</span>
   <h1>Take card payments on your invoices without a third-party processor.</h1>
   <p class="lede">If you use Xero and bank with NAB, you already have everything you need. Transiqe connects the two and looks after the payment, the reminders and the bookkeeping that follows.</p>
-</div></div>'''
+</div>'''+ ART_FEATURES + '''</div>'''
 
-features = hero('on-image', 'features', feat_hero, cls='warm subhero') + f'''
+features = hero('on-image', 'features', feat_hero, img='light-warm', cls='subhero') + f'''
 
 <section class="band"><div class="wrap"><div class="rows">
   {frow('Pay by card, straight from your Xero invoice',
@@ -55,11 +55,11 @@ page('features', 'Features · Transiqe',
      features)
 
 # ------------------------------------------------------------------ customers
-cust_hero = '''<div class="hero-grid"><div class="copy">
+cust_hero = '''<div class="hero-grid with-art"><div class="copy">
   <span class="tag">For your customers</span>
   <h1>Paying you should be the easy part.</h1>
   <p class="lede">Your customers see your business name, your invoice and one clear button. They pay by card in under a minute, and they stay in control of anything automatic.</p>
-</div></div>'''
+</div>'''+ ART_CUSTOMERS + '''</div>'''
 
 customers = hero('on-image', 'customers', cust_hero, img='owner-laptop', cls='subhero', pos='62% 26%') + f'''
 
@@ -107,13 +107,13 @@ page('customers', 'For your customers · Transiqe',
      customers)
 
 # ------------------------------------------------------------------ pricing
-price_hero = '''<div class="hero-grid"><div class="copy">
+price_hero = '''<div class="hero-grid with-art"><div class="copy">
   <span class="tag">Pricing</span>
   <h1>A flat monthly price. No percentage of your invoices.</h1>
   <p class="lede">You pay Transiqe for the software. You pay NAB the card fees you agreed with NAB. Nobody takes a cut in between.</p>
-</div></div>'''
+</div>'''+ ART_PRICING + '''</div>'''
 
-pricing = hero('on-image', 'pricing', price_hero, cls='dark subhero') + f'''
+pricing = hero('on-image', 'pricing', price_hero, img='light-ink', cls='cool subhero') + f'''
 
 <section class="band"><div class="wrap">
   {PLANS}

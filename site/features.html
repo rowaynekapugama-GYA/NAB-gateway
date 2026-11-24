@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<div class="shell"><section class="panel warm subhero"><div class="inner"><header>
+<div class="shell"><section class="panel subhero"><picture><source type="image/webp" media="(max-width:700px)" srcset="assets/img/light-warm-900.webp"><source type="image/webp" srcset="assets/img/light-warm.webp"><img src="assets/img/light-warm.jpg" alt="" style="object-position:center" fetchpriority="high"></picture><div class="inner"><header>
 <div class="nav on-image">
   <a class="logo" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30">transiqe</a>
   <nav class="links" aria-label="Main"><a href="how-it-works.html">How it works</a><a href="features.html" aria-current="page">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></nav>
@@ -21,11 +21,11 @@
   <button class="burger" type="button" aria-label="Menu" aria-expanded="false" id="menu-btn">&#9776;</button></div>
 </div>
 <div class="mobile-menu" id="mobile-menu"><a href="how-it-works.html">How it works</a><a href="features.html" aria-current="page">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a><a href="https://app.transiqe.com/login">Sign in</a><a href="https://app.transiqe.com/portal">Customer portal</a></div>
-</header><div class="hero-grid"><div class="copy">
+</header><div class="hero-grid with-art"><div class="copy">
   <span class="tag">Features</span>
   <h1>Take card payments on your invoices without a third-party processor.</h1>
   <p class="lede">If you use Xero and bank with NAB, you already have everything you need. Transiqe connects the two and looks after the payment, the reminders and the bookkeeping that follows.</p>
-</div></div></div></section></div>
+</div><div class="art" aria-hidden="true"><div class="fl fa" style="left:8%;top:6%;--n:0;--d:10;--rot:-4deg;--dur:8s"><div class="glass mini"><div class="who">Northside Physio</div><div class="tiny muted">Invoice INV-0238</div><div class="amt num">$121.00</div><div class="btn cobalt block sm">Pay now</div></div></div><div class="fl fb" style="right:2%;top:2%;--n:1;--d:22;--rot:3deg;--dur:6.5s"><div class="glass chipx"><span class="toggle"></span><span>Autopay<small>Customer opted in</small></span></div></div><div class="fl fc" style="right:0;top:46%;--n:2;--d:30;--rot:-2deg;--dur:7.5s"><div class="chipx dark"><span class="dotok"></span><span>Marked paid in Xero<small>INV-0238, just now</small></span></div></div><div class="fl fd" style="left:0;bottom:4%;--n:3;--d:18;--rot:2deg;--dur:9s"><div class="chipx warm"><span>Reminder sent<small>INV-0224, 2 days overdue</small></span></div></div></div></div></div></section></div>
 
 <section class="band"><div class="wrap"><div class="rows">
   <div class="rowx"><div class="txt"><h3>Pay by card, straight from your Xero invoice</h3><p>A Pay now button is attached to the invoices you send from Xero. Your customer clicks it, sees exactly what is due and pays by card. The payment runs through your own NAB Gateway.</p><ul class="checks"><li>Works on the invoices you already send</li><li>The amount always comes from the invoice</li><li>Card fields provided by NAB Gateway</li></ul></div><div class="vis"><div class="stage"><div class="screen phone">
@@ -113,7 +113,7 @@
   </div>
 </div></section>
 
-<section class="band tight"><div class="wrap"><div class="closer">
+<section class="band tight"><div class="wrap"><div class="closer has-img"><img class="bg" src="assets/img/light-warm.jpg" alt="" loading="lazy">
   <h2>Connect Xero and your NAB Gateway. Take your first card payment this week.</h2>
   <p>Free while you set up. Your invoices keep going out of Xero exactly as they do today.</p>
   <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ink lg" href="https://app.transiqe.com/signup">Start free <span class="arr">&rarr;</span></a><a class="btn white lg" href="mailto:hello@transiqe.com">Talk to us</a></div>
@@ -130,6 +130,6 @@
 </div>
 <p class="fine">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is software. It is not a bank or a payment processor and never holds your money: card payments are processed by NAB under your own merchant agreement and settle to your account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited. Transiqe is not affiliated with or endorsed by either company.</p>
 </div></footer>
-<script>(function(){var b=document.getElementById('menu-btn'),m=document.getElementById('mobile-menu');if(!b||!m)return;b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();</script>
+<script src="js/site.js" defer></script>
 </body>
 </html>

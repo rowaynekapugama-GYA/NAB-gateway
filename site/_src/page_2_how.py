@@ -3,13 +3,13 @@ def row(n, title, text, visual, checks=()):
     cl = f'<ul class="checks">{cl}</ul>' if cl else ''
     return f'<div class="rowx"><div class="txt"><span class="n">{n}</span><h3>{title}</h3><p>{text}</p>{cl}</div><div class="vis">{visual}</div></div>'
 
-how_hero = f'''<div class="hero-grid"><div class="copy">
+how_hero = f'''<div class="hero-grid with-art"><div class="copy">
   <span class="tag">How it works</span>
   <h1>From Xero invoice to money in your NAB account, step by step.</h1>
   <p class="lede">You set Transiqe up once. After that, every invoice you send from Xero can be paid by card through your own NAB Gateway, and the payment is recorded back in Xero for you.</p>
-</div></div>'''
+</div>{ART_HOW}</div>'''
 
-how = hero('on-image', 'how', how_hero, img='owner-tablet', cls='cool subhero', pos='70% 30%') + f'''
+how = hero('on-image', 'how', how_hero, img='light-dusk', cls='cool subhero') + f'''
 
 <section class="band"><div class="wrap">
   <div class="part"><span class="k">Part one</span><h2>Set up, once.</h2></div>

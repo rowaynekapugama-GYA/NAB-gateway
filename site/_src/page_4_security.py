@@ -3,11 +3,11 @@ def docpage(sections, intro=''):
     body = ''.join(f'<h2 id="{i}">{t}</h2>{h}' for i, t, h in sections)
     return f'<section class="band"><div class="wrap doc"><nav class="toc" aria-label="On this page"><b>On this page</b>{toc}</nav><article class="prose">{intro}{body}</article></div></section>'
 
-sec_hero = '''<div class="hero-grid"><div class="copy">
+sec_hero = '''<div class="hero-grid with-art"><div class="copy">
   <span class="tag">Security</span>
   <h1>Security and data protection</h1>
   <p class="lede">Transiqe is designed so that card data is handled by NAB, funds are never held by Transiqe, and access to your Xero and NAB Gateway accounts is limited to what the service requires. This page sets out the controls in place.</p>
-</div></div>'''
+</div>'''+ ART_SECURITY + '''</div>'''
 
 sec_intro = '''<div class="note key"><strong>In summary.</strong> Card details are entered into fields provided by NAB Gateway and are not stored by Transiqe. Payments settle from your customer's card to your NAB account under your own merchant agreement. Credentials and connection tokens are encrypted. You can revoke Transiqe's access to Xero and to your NAB Gateway at any time.</div>'''
 

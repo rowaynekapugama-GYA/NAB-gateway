@@ -20,7 +20,7 @@ home_hero = f'''
   </div>
 </div>'''
 
-home = hero('on-image', '', home_hero, img='owner-laptop', pos='62% 28%') + f'''
+home = hero('on-image', '', home_hero, img='owner-tablet', cls='cool', pos='40% 30%', flip=True) + f'''
 
 <section class="band"><div class="wrap">
   <div class="head">
@@ -31,7 +31,7 @@ home = hero('on-image', '', home_hero, img='owner-laptop', pos='62% 28%') + f'''
   <div class="routes">
     <div class="route usual">
       <div class="name">The usual way<small>A separate processor sits between your customer and your bank.</small></div>
-      <div class="track">
+      <div class="track"><i class="rail"></i><i class="coin"></i>
         <div class="stop">Xero invoice</div><span class="sep">&rarr;</span>
         <div class="stop mid">Third-party payment processor<small>Its own fee on every payment. Holds the money, pays out later.</small></div><span class="sep">&rarr;</span>
         <div class="stop">Your bank account</div>
@@ -39,7 +39,7 @@ home = hero('on-image', '', home_hero, img='owner-laptop', pos='62% 28%') + f'''
     </div>
     <div class="route ours">
       <div class="name">With Transiqe<small>Your invoice connects straight to your own NAB Gateway.</small></div>
-      <div class="track">
+      <div class="track"><i class="rail"></i><i class="coin"></i>
         <div class="stop">Xero invoice<small>With a Pay now button</small></div><span class="sep">&rarr;</span>
         <div class="stop key">Your NAB Gateway<small>The card fees you agreed with NAB</small></div><span class="sep">&rarr;</span>
         <div class="stop">Your NAB account<small>Paid to you directly</small></div><span class="sep">&rarr;</span>
@@ -52,7 +52,7 @@ home = hero('on-image', '', home_hero, img='owner-laptop', pos='62% 28%') + f'''
 <section class="band tight"><div class="wrap">
   <div class="bento">
     <div class="tile photo a">
-      <picture><source type="image/webp" srcset="assets/img/owner-tablet-900.webp"><img src="assets/img/owner-tablet.jpg" alt="A business owner checking payments on a tablet" loading="lazy" style="object-position:38% 30%"></picture>
+      <picture><source type="image/webp" srcset="assets/img/owner-laptop-900.webp"><img src="assets/img/owner-laptop.jpg" alt="A business owner at home, working on a laptop" loading="lazy" style="object-position:66% 22%"></picture>
       <div class="over"><div class="glass chipcard"><div><b>Olive &amp; Co Pty Ltd paid $1,320.00</b><span class="s">INV-0229, paid by card, 8:40 am</span></div><span class="pill green">Marked paid in Xero</span></div></div>
     </div>
     <div class="tile ember b"><div class="big num">2</div><h4 style="margin-top:18px">connections to set up</h4><p>Xero and your NAB Gateway. That is the whole setup.</p></div>
@@ -126,7 +126,7 @@ home = hero('on-image', '', home_hero, img='owner-laptop', pos='62% 28%') + f'''
 </div></section>
 
 <section class="band tight"><div class="wrap">
-  <div class="shell" style="padding:0"><div class="panel cool">
+  <div class="shell" style="padding:0"><div class="panel cool inview">
     <img class="bg" src="assets/img/card-circuit.jpg" alt="" loading="lazy" style="object-position:70% 50%">
     <div class="inner" style="padding:clamp(28px,5vw,72px)">
       <span class="tag">Fees</span>
