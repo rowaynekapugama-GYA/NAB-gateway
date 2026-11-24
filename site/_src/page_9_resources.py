@@ -25,7 +25,7 @@ FAQ = [
   ('When does the money reach my account?', 'On NAB’s settlement timetable under your merchant agreement. Transiqe is not in the money flow, so it does not hold or delay settlement.'),
   ('Which cards can my customers use?', 'The card types your NAB Gateway facility is set up to accept. Check with NAB if you are not sure which ones are enabled.'),
   ('Will my customers pay a surcharge?', 'Not from Transiqe. Customers pay the amount on the invoice, and Transiqe never adds a card surcharge.'),
-  ('How do refunds work?', 'Refund a payment from your Transiqe dashboard and the money goes back to your customer’s card through your NAB Gateway.'),
+  ('How do refunds work?', 'Refund a payment from your Transiqe dashboard, or manually in your NAB Gateway if you prefer. Either way the money goes back to your customer’s card.'),
  ]),
  ('autopay', 'Autopay and repeating invoices', [
   ('What is autopay?', 'Autopay lets your customer save their card and have your future invoices paid automatically, on the timing they choose. It is always the customer’s choice and they see the <a href="autopay-terms.html">autopay terms</a> before they agree.'),
@@ -126,6 +126,7 @@ HELP = [
      'Go to <b>Payments</b> and find the payment.',
      'Select <b>Refund</b> and confirm.',
      'The money goes back to the customer’s card through your NAB Gateway.',
+     'Prefer to do it yourself? You can also refund the payment manually in your NAB Gateway.',
      'Record the refund in Xero as you normally would.']),
   guide('declined', 'When a card is declined', [
      'If a customer’s card is declined while paying, they are told straight away and can try another card.',
@@ -246,7 +247,7 @@ ARTICLES = [
 <h2>About saved cards and autopay</h2>
 <ul>
 <li><strong>Can cards be stored for future payments?</strong> Autopay needs the facility to save a customer’s card securely as a token, so future invoices can be charged without the card details.</li>
-<li><strong>Are refunds enabled?</strong> You will want to refund from your Transiqe dashboard when you need to.</li>
+<li><strong>Are refunds enabled?</strong> You will want to be able to refund from your Transiqe dashboard, as well as manually in NAB Gateway.</li>
 <li><strong>Is extra authentication required?</strong> Ask whether customers will be asked to confirm some payments with their bank, and when.</li>
 </ul>
 <h2>About connecting Transiqe</h2>

@@ -59,7 +59,7 @@ how = hero('on-image', 'how', how_hero, img='light-dusk', cls='cool subhero') + 
   <ul class="plainlist">
     <li><h4>A card is declined</h4><p>Your customer is told straight away and can pay with another card. For autopay, Transiqe lets them know, tries again, and tells you both if it still cannot collect. The invoice stays open in Xero the whole time.</p></li>
     <li><h4>An invoice is overdue</h4><p>Transiqe sends payment reminders for you, each with the Pay now button, so chasing does not depend on you remembering.</p></li>
-    <li><h4>You need to refund a payment</h4><p>Refund it from your Transiqe dashboard and the money goes back to your customer's card through your NAB Gateway.</p></li>
+    <li><h4>You need to refund a payment</h4><p>Refund it from your Transiqe dashboard, or manually in your NAB Gateway if you prefer. Either way the money goes back to your customer's card through your own merchant facility.</p></li>
     <li><h4>You void or change an invoice in Xero</h4><p>Transiqe follows Xero. If an invoice is voided or already paid another way, any scheduled autopay for it is cancelled.</p></li>
   </ul>
 </div></section>

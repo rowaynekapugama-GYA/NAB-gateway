@@ -201,5 +201,5 @@ solution_page(
     ('Looking after several clients?', 'Talk to us about setting Transiqe up across your practice. Email hello@transiqe.com and tell us how many clients you look after.'),
     [('Does Transiqe change anything in my client’s Xero file?', 'It reads contacts and invoices and records payments against invoices. It does not create, edit or delete invoices.'),
      ('Where do the card fees show up?', 'Card fees are charged by NAB under your client’s merchant agreement and appear on their NAB merchant statement. Transiqe records the payment in Xero at the amount paid.'),
-     ('How are refunds handled?', 'Refunds are issued from the Transiqe dashboard and go back to the customer’s card through NAB Gateway. Record the refund in Xero as you normally would.')],
+     ('How are refunds handled?', 'Refunds can be issued from the Transiqe dashboard or manually in NAB Gateway, and either way they go back to the customer’s card. Record the refund in Xero as you normally would.')],
 )
