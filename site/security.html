@@ -1,51 +1,71 @@
-<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Security · Transiqe</title><meta name="description" content="Card numbers never reach Transiqe. Hosted bank payment page, encrypted credentials, minimal Xero permissions.">
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Security and data protection · Transiqe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="How Transiqe protects payments and data: card details handled by NAB Gateway, funds never held by Transiqe, encrypted credentials, limited access to Xero, and clear incident response.">
+<link rel="canonical" href="https://www.transiqe.com/security.html">
 <link rel="icon" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta property="og:title" content="Security · Transiqe"><meta property="og:description" content="Card numbers never reach Transiqe. Hosted bank payment page, encrypted credentials, minimal Xero permissions."><meta property="og:image" content="https://transiqe.com/assets/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/transiqe.css"><style>
-.pagehead{padding:70px 0 30px}
-.pagehead h1{max-width:16ch;font-size:clamp(36px,5vw,60px)}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-@media(max-width:900px){.plans{grid-template-columns:1fr}}
-.plan{padding:32px;display:grid;gap:14px;align-content:start}
-.plan .price{font:700 44px var(--font-display);letter-spacing:-.04em}
-.plan .price small{font:600 15px var(--font-body);color:var(--ink-3);letter-spacing:0}
-.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:var(--ink-2);font-size:15px}
-.plan li::before{content:"✓ ";color:var(--cobalt);font-weight:800}
-.plan.hot{outline:2px solid rgba(59,91,255,.45);outline-offset:-2px}
-.note{padding:28px;margin-top:24px;color:var(--ink-2)}
-.timeline{display:grid;gap:12px;max-width:760px}
-.timeline .t{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 22px}
-.timeline .t b{font-family:var(--font-display);letter-spacing:-.02em}
-.sec{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:800px){.sec{grid-template-columns:1fr}}
-.feature-list{display:grid;gap:14px}
-.feature-list .row{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 22px}
-</style></head><body class=""><div class="ambient"><i></i></div>
-<header class="nav"><div class="bar glass pill strong">
-<a class="logo" href="index.html"><img src="assets/mark.svg" alt="">transiqe</a>
-<nav class="links"><a href="features.html" >Features</a><a href="customers.html" >For your customers</a><a href="pricing.html" >Pricing</a><a href="security.html" class="on">Security</a></nav>
-<div class="cta"><a class="btn glassy sm" href="login.html">Sign in</a><a class="btn primary sm" href="signup.html">Start free</a></div>
-</div></header>
-
-<section class="pagehead"><div class="wrap"><h1>Built so card numbers never reach us.</h1>
-<p class="lede" style="margin-top:18px">The design choice that matters most is the one you don't see: every card is entered on the bank's own hosted page. Everything else follows from that.</p></div></section>
-<section style="padding-top:10px"><div class="wrap grid c2">
-  <div class="card glass sm"><h3>Card data</h3><p>Customers type card details on NAB's hosted payment page. The bank returns a token for saved cards; Transiqe stores the token, the last four digits and the expiry, never the card number or security code. This keeps you and Transiqe in the lightest PCI DSS category.</p></div>
-  <div class="card glass sm"><h3>Your money</h3><p>Transiqe never holds funds. Card payments settle from your merchant facility to your bank account under your own agreement with NAB. If Transiqe disappeared tomorrow, your money would still be in your account.</p></div>
-  <div class="card glass sm"><h3>Credentials at rest</h3><p>Your gateway passwords and the Xero connection tokens are encrypted with AES-256-GCM before they're stored, and decrypted only in memory when a request to the bank or Xero is made.</p></div>
-  <div class="card glass sm"><h3>Xero access</h3><p>Transiqe asks for the minimum Xero permissions: read contacts and invoices, record payments. It never creates or edits invoices, and you can disconnect it from inside Xero at any time.</p></div>
-  <div class="card glass sm"><h3>Customer sign-in</h3><p>Customers sign in with single-use links that expire after seven days. There are no customer passwords to leak. Business logins use hashed passwords and expiring sessions.</p></div>
-  <div class="card glass sm"><h3>Tamper-proof amounts</h3><p>The amount charged always comes from the invoice as recorded from Xero, never from a link or a form field, so a modified link cannot underpay an invoice. Returns from the bank's page are signed and checked before anything is recorded.</p></div>
-</div></section>
-<section><div class="wrap"><div class="glass" style="padding:36px"><h3>Where things run</h3><p style="margin-top:8px;color:var(--ink-2);max-width:70ch">Transiqe runs on Australian cloud infrastructure with encrypted backups. An audit log records every connection change, payment, refund and autopay decision per business, and you can see every email we sent on your behalf in your outbox. Questions about a security review, or a disclosure to make? Write to <a href="mailto:security@transiqe.com">security@transiqe.com</a>.</p></div></div></section>
-<footer><div class="wrap"><div class="cols">
-<div><a class="logo" href="index.html" style="display:inline-flex;align-items:center;gap:8px;font:700 18px var(--font-display);color:var(--abyss);letter-spacing:-.03em"><img src="assets/mark.svg" width="24" alt="">transiqe</a>
-<p style="margin-top:10px;max-width:32ch">Card payments and autopay for Xero invoices, through your own bank. Built in Sydney for Australian small businesses.</p></div>
-<div><h4>Product</h4><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a></div>
-<div><h4>Account</h4><a href="login.html">Business sign in</a><a href="portal.html">Customer portal</a><a href="signup.html">Create an account</a></div>
-<div><h4>Company</h4><a href="mailto:hello@transiqe.com">hello@transiqe.com</a><a href="#">Privacy</a><a href="#">Terms</a></div>
-</div><p class="tiny">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is not a bank and never holds your money: payments settle directly from your customer's card to your merchant account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited.</p></div></footer>
-</body></html>
+<meta property="og:title" content="Security and data protection · Transiqe"><meta property="og:description" content="How Transiqe protects payments and data: card details handled by NAB Gateway, funds never held by Transiqe, encrypted credentials, limited access to Xero, and clear incident response."><meta property="og:image" content="https://www.transiqe.com/assets/og.png"><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="shell"><section class="panel cool subhero"><picture><source type="image/webp" media="(max-width:700px)" srcset="assets/img/card-circuit-900.webp"><source type="image/webp" srcset="assets/img/card-circuit.webp"><img src="assets/img/card-circuit.jpg" alt="" style="object-position:70% 55%" fetchpriority="high"></picture><div class="inner"><header>
+<div class="nav on-image">
+  <a class="logo" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30">transiqe</a>
+  <nav class="links" aria-label="Main"><a href="how-it-works.html">How it works</a><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html" aria-current="page">Security</a></nav>
+  <div class="acts"><a class="signin" href="https://app.transiqe.com/login">Sign in</a><a class="btn white sm" href="https://app.transiqe.com/signup">Start free</a>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" id="menu-btn">&#9776;</button></div>
+</div>
+<div class="mobile-menu" id="mobile-menu"><a href="how-it-works.html">How it works</a><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a><a href="security.html" aria-current="page">Security</a><a href="https://app.transiqe.com/login">Sign in</a><a href="https://app.transiqe.com/portal">Customer portal</a></div>
+</header><div class="hero-grid"><div class="copy">
+  <span class="tag">Security</span>
+  <h1>Security and data protection</h1>
+  <p class="lede">Transiqe is designed so that card data is handled by NAB, funds are never held by Transiqe, and access to your Xero and NAB Gateway accounts is limited to what the service requires. This page sets out the controls in place.</p>
+</div></div></div></section></div><section class="band"><div class="wrap doc"><nav class="toc" aria-label="On this page"><b>On this page</b><a href="#architecture">Payment architecture</a><a href="#card-data">Cardholder data</a><a href="#funds">Funds</a><a href="#connections">Connections to Xero and NAB Gateway</a><a href="#encryption">Encryption</a><a href="#access">Authentication and access</a><a href="#integrity">Payment integrity</a><a href="#autopay">Automatic payments</a><a href="#audit">Logging and audit</a><a href="#privacy">Privacy</a><a href="#incidents">Incident response</a><a href="#your-part">Your responsibilities</a><a href="#report">Reporting a vulnerability</a></nav><article class="prose"><div class="note key"><strong>In summary.</strong> Card details are entered into fields provided by NAB Gateway and are not stored by Transiqe. Payments settle from your customer's card to your NAB account under your own merchant agreement. Credentials and connection tokens are encrypted. You can revoke Transiqe's access to Xero and to your NAB Gateway at any time.</div><h2 id="architecture">Payment architecture</h2>
+<p>Transiqe is a software service. It is not a bank, a merchant acquirer or a payment facilitator, and it does not take part in the settlement of funds.</p>
+<p>Card payments are processed by National Australia Bank through the NAB Gateway account held by the business issuing the invoice. Transiqe sends payment requests to that account on the business's instruction and records the result. Each business's payments are processed only through its own NAB Gateway account.</p><h2 id="card-data">Cardholder data</h2>
+<p>Card details are entered into payment fields provided by NAB Gateway. Transiqe does not store full card numbers or card security codes.</p>
+<p>Where a customer chooses to save a card, NAB Gateway issues a token that represents the card. Transiqe stores that token together with the card brand, the last four digits and the expiry date, so the card can be identified to its holder. A token can only be used through the NAB Gateway account of the business it was created for. It cannot be used to make a payment anywhere else.</p>
+<p>This design is intended to keep cardholder data within NAB's payment environment and to minimise the card data handled by Transiqe and by the businesses that use it.</p><h2 id="funds">Funds</h2>
+<p>Transiqe never holds, receives or controls customer funds. Payments settle from the customer's card to the business's account in accordance with the business's merchant agreement with NAB. Transiqe cannot redirect settlement, and it has no access to the business's bank account.</p><h2 id="connections">Connections to Xero and NAB Gateway</h2>
+<p><strong>Xero.</strong> Businesses connect Xero using Xero's own authorisation flow. Transiqe does not see or store Xero passwords. Access is limited to what the service needs: reading contacts and invoices, and recording payments against invoices. Access can be revoked at any time from within Xero or from Transiqe.</p>
+<p><strong>NAB Gateway.</strong> Connection details for a business's NAB Gateway account are encrypted before they are stored and are never displayed in full after they have been entered. They are used only to communicate with NAB Gateway on that business's behalf, and can be replaced or removed by the business at any time.</p><h2 id="encryption">Encryption</h2>
+<p>Data sent between browsers, Transiqe, Xero and NAB Gateway is encrypted in transit using TLS. Credentials, connection tokens and card tokens are encrypted at rest.</p><h2 id="access">Authentication and access</h2>
+<p><strong>Business accounts.</strong> Passwords are stored as salted hashes and never in readable form. Sessions expire, and a business can only ever see its own customers, invoices and payments.</p>
+<p><strong>Customer portal.</strong> Customers sign in using a single-use link sent to the email address on their invoice. Links expire. There are no customer passwords to be guessed, reused or leaked.</p><h2 id="integrity">Payment integrity</h2>
+<ul>
+<li>The amount charged is always taken from the invoice record, never from a link or a form field, so an altered link cannot change what is paid.</li>
+<li>Responses from NAB Gateway are verified before a payment is recorded.</li>
+<li>Payment events are processed once, so a repeated notification cannot record the same payment twice.</li>
+<li>Refunds are sent through NAB Gateway to the card that made the original payment.</li>
+</ul><h2 id="autopay">Automatic payments</h2>
+<p>A card is only charged automatically where its holder has opted in and accepted the <a href="autopay-terms.html">autopay terms</a>. Customers can withdraw that authority at any time from their portal. Customers are sent each invoice and a receipt for each payment. If an invoice is voided or paid by other means, any scheduled automatic payment for it is cancelled.</p><h2 id="audit">Logging and audit</h2>
+<p>Transiqe keeps a record for each business of connection changes, payments, refunds and changes to automatic payment settings, and of the emails sent to its customers. These records are available to the business in its account.</p><h2 id="privacy">Privacy</h2>
+<p>Personal information is handled in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles. Transiqe does not sell personal information. The <a href="privacy.html">privacy policy</a> sets out what is collected, why, and who it is shared with.</p><h2 id="incidents">Incident response</h2>
+<p>Suspected security incidents are investigated promptly. If an incident affects a business's data, Transiqe will tell that business without undue delay and provide the information it needs to respond. Where an incident is an eligible data breach under the Notifiable Data Breaches scheme, Transiqe will notify affected individuals and the Office of the Australian Information Commissioner as the law requires.</p><h2 id="your-part">Your responsibilities</h2>
+<p>Security is shared. Businesses using Transiqe are responsible for:</p>
+<ul>
+<li>keeping their Transiqe sign-in details confidential and using a strong, unique password;</li>
+<li>controlling who in their business has access to Transiqe, Xero and NAB Gateway;</li>
+<li>keeping their NAB Gateway credentials secure and replacing them if they may have been exposed;</li>
+<li>telling Transiqe promptly about any suspected unauthorised access.</li>
+</ul><h2 id="report">Reporting a vulnerability</h2>
+<p>If you believe you have found a security vulnerability in Transiqe, please email <a href="mailto:security@transiqe.com">security@transiqe.com</a> with enough detail for us to reproduce it. We ask that you act in good faith, do not access or alter data that is not yours, and give us reasonable time to respond before any public disclosure. We will acknowledge your report and keep you informed.</p></article></div></section>
+<footer><div class="wrap">
+<div class="cols">
+  <div><a class="logo" href="index.html"><img src="assets/mark.svg" alt="" width="26" height="26">transiqe</a>
+  <p style="margin-top:12px;max-width:34ch">Card payments on your Xero invoices, through your own NAB Gateway. Built in Sydney for Australian businesses.</p></div>
+  <div><h4>Product</h4><a href="how-it-works.html">How it works</a><a href="features.html">Features</a><a href="customers.html">For your customers</a><a href="pricing.html">Pricing</a></div>
+  <div><h4>Account</h4><a href="https://app.transiqe.com/login">Business sign in</a><a href="https://app.transiqe.com/signup">Create an account</a><a href="https://app.transiqe.com/portal">Customer portal</a></div>
+  <div><h4>Trust</h4><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="autopay-terms.html">Autopay terms</a></div>
+  <div><h4>Contact</h4><a href="mailto:hello@transiqe.com">hello@transiqe.com</a><a href="mailto:security@transiqe.com">security@transiqe.com</a></div>
+</div>
+<p class="fine">Transiqe is a product of Generate Your Audience Pty Ltd, ABN 68 620 590 481. Transiqe is software. It is not a bank or a payment processor and never holds your money: card payments are processed by NAB under your own merchant agreement and settle to your account. Xero is a trademark of Xero Limited. NAB is a trademark of National Australia Bank Limited. Transiqe is not affiliated with or endorsed by either company.</p>
+</div></footer>
+<script>(function(){var b=document.getElementById('menu-btn'),m=document.getElementById('mobile-menu');if(!b||!m)return;b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();</script>
+</body>
+</html>
