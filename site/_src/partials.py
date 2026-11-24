@@ -133,19 +133,19 @@ SAMPLE_NOTE = '<p class="tiny muted" style="margin-top:14px">Screens are illustr
 
 CLOSER = f'''<section class="band tight"><div class="wrap"><div class="closer has-img"><img class="bg" src="assets/img/light-warm.jpg" alt="" loading="lazy">
   <h2>Connect Xero and your NAB Gateway. Take your first card payment this week.</h2>
-  <p>Free while you set up. Your invoices keep going out of Xero exactly as they do today.</p>
-  <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ink lg" href="{APP}/signup">Start free <span class="arr">&rarr;</span></a><a class="btn white lg" href="mailto:hello@transiqe.com">Talk to us</a></div>
+  <p>No application and no approval wait. Connect Xero and your NAB Gateway, and your invoices keep going out of Xero exactly as they do today.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ink lg" href="{APP}/signup">Sign up <span class="arr">&rarr;</span></a><a class="btn white lg" href="mailto:hello@transiqe.com">Talk to us</a></div>
 </div></div></section>'''
 
 PLANS = f'''<div class="plans">
   <div class="plan"><h3>Starter</h3><div><span class="price num">$49.95</span> <span class="per">per month</span></div>
     <p class="for">Up to 100 invoices a month.</p>
     <ul><li>Pay now on your Xero invoices</li><li>Autopay and repeating invoices</li><li>Customer portal</li><li>Reminders and receipts</li><li>Payments recorded in Xero</li></ul>
-    <a class="btn ink" href="{APP}/signup">Start free</a></div>
+    <a class="btn ink" href="{APP}/signup">Sign up</a></div>
   <div class="plan hot"><h3>Growth</h3><div><span class="price num">$99</span> <span class="per">per month</span></div>
     <p class="for">Up to 1,000 invoices a month.</p>
     <ul><li>Everything in Starter</li><li>Ten times the invoice allowance</li><li>One flat price, however many of the 1,000 you use</li></ul>
-    <a class="btn white" href="{APP}/signup">Start free</a></div>
+    <a class="btn white" href="{APP}/signup">Sign up</a></div>
   <div class="plan"><h3>More than 1,000</h3><div><span class="price">Talk to us</span></div>
     <p class="for">For businesses sending more than 1,000 invoices a month.</p>
     <ul><li>Everything in Growth</li><li>Pricing to suit your volume</li><li>Help getting set up</li></ul>

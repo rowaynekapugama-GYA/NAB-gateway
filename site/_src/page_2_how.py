@@ -14,7 +14,7 @@ how = hero('on-image', 'how', how_hero, img='light-dusk', cls='cool subhero') + 
 <section class="band"><div class="wrap">
   <div class="part"><span class="k">Part one</span><h2>Set up, once.</h2></div>
   <div class="rows">
-    {row(1, 'Create your Transiqe account', 'Enter your business name and email and you are in. It is free while you set up, so you can connect everything and send a test invoice before you pay anything.',
+    {row(1, 'Sign up', 'Enter your name, your business and your email, and choose your plan. There is no application to Transiqe and no approval to wait for.',
          f'<div class="stage">{SCREEN_CONNECT}</div>')}
     {row(2, 'Connect Xero', 'Click Connect Xero, sign in to Xero and approve. Transiqe reads your customers and invoices and records payments against them. It does not change how you invoice.',
          f'<div class="stage ember"><div class="screen phone"><div class="inv"><h5 style="margin-bottom:14px">Imported from Xero</h5><div style="display:grid;gap:8px"><div class="field"><span>Marcus Bell</span><b class="num">2 open invoices</b></div><div class="field"><span>Olive &amp; Co Pty Ltd</span><b class="num">1 open invoice</b></div><div class="field"><span>Priya Sharma</span><b class="num">1 open invoice</b></div><div class="field"><span>Dan Harker</span><b class="num">1 open invoice</b></div><div class="field"><span>47 more customers</span><b class="num">4 open invoices</b></div></div><p class="tiny muted" style="margin-top:12px">New customers and invoices you add in Xero appear here automatically.</p></div></div></div>',

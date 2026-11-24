@@ -141,7 +141,7 @@ pricing = hero('on-image', 'pricing', price_hero, img='light-ink', cls='cool sub
   </div>
   <div class="tile ember" style="padding:clamp(26px,4vw,48px)">
     <h3>What you pay Transiqe</h3>
-    <p style="margin-top:10px">One flat monthly subscription for the software, based on how many invoices you send. No setup fee, no per-payment fee and no percentage of your takings. It is free while you set up.</p>
+    <p style="margin-top:10px">One flat monthly subscription for the software, based on how many invoices you send. No setup fee, no per-payment fee and no percentage of your takings.</p>
   </div>
 </div></section>
 
@@ -150,7 +150,7 @@ pricing = hero('on-image', 'pricing', price_hero, img='light-ink', cls='cool sub
   <div class="faq">
     <details open><summary>Are card fees included in the plan price?</summary><p>No. Card fees are charged by NAB under your own merchant agreement, at the rate you agreed with NAB. Your Transiqe plan covers the software only.</p></details>
     <details><summary>Does Transiqe take a percentage of each payment?</summary><p>No. There is no percentage and no per-payment fee from Transiqe. You pay the flat monthly price for your plan.</p></details>
-    <details><summary>What does free while you set up mean?</summary><p>You can create your account, connect Xero and your NAB Gateway and send yourself a test invoice before you pay anything.</p></details>
+    <details><summary>Do I need to apply or wait for approval?</summary><p>Not from Transiqe. Sign up, choose your plan and connect Xero and your NAB Gateway. If you do not have a NAB Gateway account yet, that is arranged with NAB.</p></details>
     <details><summary>What if I send more than 1,000 invoices a month?</summary><p>Talk to us at hello@transiqe.com and we will price a plan around your volume.</p></details>
   </div>
 </div></section>

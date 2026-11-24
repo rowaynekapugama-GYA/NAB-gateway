@@ -57,7 +57,7 @@ terms_sections = [
 </ul>'''),
  ('fees', '7. Fees and billing', '''
 <p><strong>Plans.</strong> Our subscription fees and the number of invoices included in each plan are set out on our <a href="pricing.html">pricing page</a>, or in a written quote where we have agreed pricing with you. <span class="confirm">An invoice counts towards your plan when it is made available for payment through Transiqe in a calendar month.</span></p>
-<p><strong>Billing.</strong> <span class="confirm">Subscription fees are charged monthly in advance to the payment method you nominate, starting when your free setup period ends.</span> <span class="confirm">Fees are stated in Australian dollars and are [inclusive / exclusive] of GST.</span> We will give you a tax invoice for each payment.</p>
+<p><strong>Billing.</strong> <span class="confirm">Subscription fees are charged monthly in advance to the payment method you nominate, starting on the day you sign up.</span> <span class="confirm">Fees are stated in Australian dollars and are [inclusive / exclusive] of GST.</span> We will give you a tax invoice for each payment.</p>
 <p><strong>Going over your plan.</strong> <span class="confirm">If you exceed your plan's invoice allowance, we will let you know and move you to the plan that fits your volume from your next billing date.</span></p>
 <p><strong>Changes to fees.</strong> We may change our fees by giving you at least 30 days' written notice. If you do not accept a change you may cancel before it takes effect.</p>
 <p><strong>Late or failed payment.</strong> If a subscription payment fails, we will tell you and try again. If it remains unpaid 14 days after we notify you, we may suspend your account until it is paid.</p>

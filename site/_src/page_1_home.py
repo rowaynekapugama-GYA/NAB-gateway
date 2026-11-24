@@ -4,8 +4,8 @@ home_hero = f'''
     <span class="tag">For businesses that use Xero and bank with NAB</span>
     <h1>Card payments on your Xero invoices, through your own NAB Gateway.</h1>
     <p class="lede">Transiqe adds a Pay now button to your Xero invoices and connects it to the NAB Gateway account you already have. Your customer pays by card. The money settles to your NAB account at the rate you agreed with NAB, and the invoice is marked paid in Xero.</p>
-    <div class="cta"><a class="btn white lg" href="{APP}/signup">Start free <span class="arr">&rarr;</span></a><a class="btn ghost lg" href="how-it-works.html">See how it works</a></div>
-    <div class="hero-note"><span><i></i>No third-party payment processor in between</span><span><i></i>Transiqe never holds your money</span></div>
+    <div class="cta"><a class="btn white lg" href="{APP}/signup">Sign up <span class="arr">&rarr;</span></a><a class="btn ghost lg" href="how-it-works.html">See how it works</a></div>
+    <div class="hero-note"><span><i></i>Set up in under five minutes</span><span><i></i>No third-party payment processor in between</span><span><i></i>Transiqe never holds your money</span></div>
   </div>
   <div class="glass paycard" aria-label="Example of an invoice being paid">
     <div class="row"><div><div class="who">Northside Physio</div><div class="tiny muted">Invoice INV-0238 to Priya Sharma</div></div><span class="pill blue">Due 25 Oct</span></div>
@@ -21,6 +21,12 @@ home_hero = f'''
 </div>'''
 
 home = hero('on-image', '', home_hero, img='owner-tablet', cls='cool', pos='40% 30%', flip=True) + f'''
+<div class="wrap"><div class="connect">
+  <span class="lbl">Connects your</span>
+  <span class="lg"><img class="x" src="assets/logos/xero.png" alt="Xero" width="54" height="54"><span class="amp">+</span><img class="n" src="assets/logos/nab.png" alt="NAB" width="102" height="40"></span>
+  <span class="div" aria-hidden="true"></span>
+  <span class="facts"><span>Built for Australian businesses</span><span>No approval wait</span><span>Live in under five minutes</span></span>
+</div></div>
 
 <section class="band"><div class="wrap">
   <div class="head">
@@ -49,42 +55,65 @@ home = hero('on-image', '', home_hero, img='owner-tablet', cls='cool', pos='40% 
   </div>
 </div></section>
 
-<section class="band tight"><div class="wrap">
-  <div class="bento">
-    <div class="tile photo a">
-      <picture><source type="image/webp" srcset="assets/img/owner-laptop-900.webp"><img src="assets/img/owner-laptop.jpg" alt="A business owner at home, working on a laptop" loading="lazy" style="object-position:66% 22%"></picture>
-      <div class="over"><div class="glass chipcard"><div><b>Olive &amp; Co Pty Ltd paid $1,320.00</b><span class="s">INV-0229, paid by card, 8:40 am</span></div><span class="pill green">Marked paid in Xero</span></div></div>
-    </div>
-    <div class="tile ember b"><div class="big num">2</div><h4 style="margin-top:18px">connections to set up</h4><p>Xero and your NAB Gateway. That is the whole setup.</p></div>
-    <div class="tile oat c"><div class="big num">0</div><h4 style="margin-top:18px">third parties in the middle</h4><p>Nothing sits between your customer's card and your NAB account.</p></div>
-    <div class="tile ink d"><h3>You pay the rate you agreed with NAB.</h3><p style="max-width:60ch">Card payments run on your own NAB merchant facility, at the fees you agreed with NAB as a NAB customer. Transiqe adds no percentage and no per-payment fee on top. We charge a flat monthly subscription for the software.</p></div>
+<section class="band" id="setup"><div class="wrap split">
+  <div class="archwrap">
+    <div class="arch"><img src="assets/img/owner-laptop.jpg" alt="A business owner setting up Transiqe on her laptop" loading="lazy">
+      <p class="quote">Connect Xero. Connect NAB. Send your next invoice.</p></div>
+    <div class="logoband" aria-hidden="true"><span class="bub"><img src="assets/logos/xero.png" alt=""></span><span class="plus">+</span><span class="bub nab"><img src="assets/logos/nab-star.png" alt=""></span><span class="plus">=</span><span class="bub tq"><img src="assets/mark.svg" alt=""></span></div>
+  </div>
+  <div>
+    <span class="label">Get set up</span>
+    <h2 style="margin-top:16px">Up and running in under five minutes.</h2>
+    <p class="lede" style="margin-top:16px">There is no application to Transiqe and no approval to wait for. If you already have a NAB Gateway account, connect it and Xero and you are ready to take card payments.</p>
+    <ol class="stepsx">
+      <li><div><span class="tm">1 min</span><b>Sign up</b><p>Your name, your business and your email. Choose your plan.</p></div></li>
+      <li><div><span class="tm">1 min</span><b>Connect Xero</b><p>Sign in to Xero and approve. Your customers and open invoices come across automatically.</p></div></li>
+      <li><div><span class="tm">2 min</span><b>Connect your NAB Gateway</b><p>Add the details from your NAB Gateway account. Card payments run on your own facility.</p></div></li>
+      <li><div><span class="tm">1 min</span><b>Switch on Pay now, and you are off</b><p>Add Transiqe as the payment option on your Xero invoices. Your next invoice can be paid by card.</p></div></li>
+    </ol>
+    <p class="fineprint">You need an active NAB Gateway account. If you do not have one yet, your NAB business banker can set it up for you.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn ink lg" href="{APP}/signup">Sign up <span class="arr">&rarr;</span></a><a class="btn line lg" href="help.html#getting-started">Read the setup guide</a></div>
   </div>
 </div></section>
 
-<section class="band" id="how"><div class="wrap">
+<section class="band tight"><div class="wrap">
   <div class="head">
-    <div><span class="label">How it works</span>
-      <h2>Set up once. <span class="soft">Then every invoice can be paid by card.</span></h2></div>
-    <p class="lede">Setup is three steps and most of it is signing in and approving. After that you keep working in Xero and Transiqe does the rest.</p>
+    <div><span class="label">After that</span>
+      <h2>What happens on every invoice. <span class="soft">Nothing new to learn.</span></h2></div>
+    <p class="lede">You keep working in Xero. Your customer pays by card, NAB settles it to your account, and Transiqe records it back in Xero.</p>
   </div>
-  <div class="ruler" aria-hidden="true"><span>Step 1</span><span>Step 2</span><span>Step 3</span><span>Ready</span></div>
-  <div class="grid g3">
-    <div class="tile oat step"><span class="n">1</span><h3>Connect Xero</h3><p>Sign in to Xero and approve the connection. Nothing changes in how you use Xero.</p>
-      <ul class="checks"><li>Your customers are imported automatically</li><li>Your open invoices come across with them</li></ul></div>
-    <div class="tile ink step dark"><span class="n">2</span><h3>Connect your NAB Gateway</h3><p>Link the NAB Gateway account you hold as a NAB customer. Card payments run on your facility.</p>
-      <ul class="checks"><li>Settles to your NAB account</li><li>Your NAB rate, nothing added</li></ul></div>
-    <div class="tile oat step"><span class="n">3</span><h3>Switch on Pay now</h3><p>Add Transiqe as the payment option on your Xero invoices. Every invoice now carries a Pay now button.</p>
-      <ul class="checks"><li>Works for one-off invoices</li><li>Works for repeating invoices</li></ul></div>
-  </div>
-  <h3 style="margin:clamp(36px,5vw,56px) 0 0">What happens on every invoice after that</h3>
   <div class="journey">
-    <div><span class="k">You</span><b>Send the invoice from Xero</b><p>Or let a repeating invoice go out on its own. Nothing new to learn.</p></div>
+    <div><span class="k">You</span><b>Send the invoice from Xero</b><p>Or let a repeating invoice go out on its own.</p></div>
     <div><span class="k">Your customer</span><b>Clicks Pay now</b><p>The button is on the invoice they receive. No account needed.</p></div>
     <div><span class="k">Your customer</span><b>Pays by card</b><p>The card fields are provided by NAB Gateway, connected to your account.</p></div>
     <div><span class="k">NAB</span><b>Settles to your NAB account</b><p>Under your own merchant agreement, at your agreed rate.</p></div>
     <div><span class="k">Transiqe</span><b>Marks it paid in Xero</b><p>The payment is recorded against the invoice and a receipt is sent.</p></div>
   </div>
   <p style="margin-top:26px"><a class="textlink" href="how-it-works.html">See every step, start to finish</a></p>
+</div></section>
+
+<section class="band" id="built-for"><div class="wrap">
+  <div class="head">
+    <div><span class="label">Who it is for</span>
+      <h2>Built for businesses of every size. <span class="soft">If you invoice, it fits.</span></h2></div>
+    <p class="lede">From a sole trader sending a handful of invoices a month to an organisation sending thousands, the setup is the same and the card fees stay with NAB.</p>
+  </div>
+  <div class="sizes">
+    <div class="size"><div class="bars" aria-hidden="true"><i class="on" style="height:30%"></i><i style="height:50%"></i><i style="height:72%"></i><i style="height:100%"></i></div>
+      <h3>Small businesses</h3><p>Sole traders, practices and small teams who want invoices paid on time without chasing or paying a middleman.</p><span class="plan-tag">Usually <span>Starter</span></span></div>
+    <div class="size mid"><div class="bars" aria-hidden="true"><i class="on" style="height:30%"></i><i class="on" style="height:50%"></i><i class="on" style="height:72%"></i><i style="height:100%"></i></div>
+      <h3>Medium-sized businesses</h3><p>Growing teams with regular clients, retainers and repeating invoices, where autopay and reconciliation save hours each month.</p><span class="plan-tag">Usually <span>Growth</span></span></div>
+    <div class="size"><div class="bars" aria-hidden="true"><i class="on" style="height:30%"></i><i class="on" style="height:50%"></i><i class="on" style="height:72%"></i><i class="on" style="height:100%"></i></div>
+      <h3>Larger organisations</h3><p>Businesses sending more than 1,000 invoices a month, or with several entities. We will tailor a plan around your volume.</p><span class="plan-tag">Talk to us <span>Custom</span></span></div>
+  </div>
+  <div class="inds">
+    <a class="ind a" href="solutions-services.html"><span class="ic">{MI['brief']}</span><h3>Service-based businesses</h3><p>Retainers, appointments, projects and memberships, paid on time.</p>
+      <div class="vig"><div class="top"><div><b>Monthly retainer</b><span class="muted">Olive &amp; Co Pty Ltd</span></div><span class="pill amber">Autopay 1 Dec</span></div><div class="amt num">$1,320.00</div></div><span class="go">Service-based businesses</span></a>
+    <a class="ind b" href="solutions-hospitality.html"><span class="ic">{MI['cup']}</span><h3>Restaurants and cafes</h3><p>Catering orders, function deposits and corporate accounts, paid by card.</p>
+      <div class="vig"><div class="top"><div><b>Function deposit</b><span class="muted">40 guests, Saturday 13 Dec</span></div><span class="pill blue">Pay now</span></div><div class="amt num">$1,500.00</div></div><span class="go">Restaurants and cafes</span></a>
+    <a class="ind c" href="solutions-ecommerce.html"><span class="ic">{MI['bag']}</span><h3>E-commerce</h3><p>Wholesale, trade and made-to-order sales that go out on an invoice.</p>
+      <div class="vig"><div class="top"><div><b>Wholesale order 1042</b><span class="muted">24 units, trade account</span></div><span class="pill green">Paid by card</span></div><div class="amt num">$2,184.00</div></div><span class="go">E-commerce</span></a>
+  </div>
 </div></section>
 
 <section class="band tight"><div class="wrap">
@@ -125,6 +154,52 @@ home = hero('on-image', '', home_hero, img='owner-tablet', cls='cool', pos='40% 
   <div class="stage ember">{SCREEN_PAY}</div>
 </div></section>
 
+<section class="band tight"><div class="wrap split">
+  <div class="stage">
+    <div class="recon">
+      <div class="rh"><span class="x"><img src="assets/logos/xero.png" alt="">Payment recorded in Xero</span><span class="pill green">Reconciled</span></div>
+      <dl>
+        <dt>Invoice</dt><dd>INV-0238, Northside Physio</dd>
+        <dt>Customer</dt><dd>Priya Sharma</dd>
+        <dt>Amount</dt><dd class="num">$121.00</dd>
+        <dt>Paid to account</dt><dd>NAB Gateway clearing</dd>
+        <dt>Reference</dt><dd class="num">NAB 7F3K2A</dd>
+        <dt>Date</dt><dd class="num">25 Oct 2026</dd>
+      </dl>
+      <div class="rf"><span class="pill grey">No manual matching</span><span class="pill grey">Bank reference attached</span></div>
+    </div>
+  </div>
+  <div>
+    <span class="label">For bookkeepers and accountants</span>
+    <h2 style="margin-top:16px">Made easy for the people who keep the books.</h2>
+    <p class="lede" style="margin-top:16px">Every card payment is recorded against the right invoice in Xero as it happens, with the bank reference attached. Nothing to key in and nothing to chase.</p>
+    <ul class="checks" style="max-width:500px">
+      <li style="background:var(--oat)">Payments land against the invoice they paid</li>
+      <li style="background:var(--oat)">You choose the Xero account payments are recorded to</li>
+      <li style="background:var(--oat)">Card fees stay on the NAB statement, where you expect them</li>
+      <li style="background:var(--oat)">A full record of every payment, refund and autopay change</li>
+    </ul>
+    <p style="margin-top:24px"><a class="textlink" href="solutions-accountants.html">Transiqe for bookkeepers and accountants</a></p>
+  </div>
+</div></section>
+
+<section class="band tight"><div class="wrap"><div class="aus">
+  <div>
+    <span class="label">Made here</span>
+    <h2 style="margin-top:16px">Built for Australian businesses.</h2>
+    <p class="lede" style="margin-top:16px">Transiqe is built and supported in Sydney, for businesses that invoice in Australian dollars and bank with an Australian bank.</p>
+    <span class="ausmark"><img src="assets/logos/nab.png" alt="NAB"><span>Works with NAB Gateway</span></span>
+  </div>
+  <ul>
+    <li><b>Your Australian bank</b><span>Card payments run on your own NAB merchant facility and settle to your NAB account.</span></li>
+    <li><b>Priced in Australian dollars</b><span>One flat monthly price. No foreign exchange, no percentage of your takings.</span></li>
+    <li><b>Your Xero invoices, unchanged</b><span>GST, tax invoices and your branding stay exactly as Xero produces them.</span></li>
+    <li><b>Australian privacy law</b><span>Personal information is handled under the Privacy Act 1988 and the Australian Privacy Principles.</span></li>
+    <li><b>No surcharge on your customers</b><span>Customers pay the amount on the invoice. Transiqe never adds a card surcharge.</span></li>
+    <li><b>Local support</b><span>Talk to the team that builds it, in your time zone, at hello@transiqe.com.</span></li>
+  </ul>
+</div></div></section>
+
 <section class="band tight"><div class="wrap">
   <div class="shell" style="padding:0"><div class="panel cool inview">
     <img class="bg" src="assets/img/card-circuit.jpg" alt="" loading="lazy" style="object-position:70% 50%">
@@ -158,9 +233,7 @@ home = hero('on-image', '', home_hero, img='owner-tablet', cls='cool', pos='40% 
     <details open><summary>What do I need to use Transiqe?</summary><p>A NAB Gateway account, which NAB provides to its business customers for taking card payments online, and ideally a Xero subscription. If you don't use Xero, you can send invoices from Transiqe itself.</p></details>
     <details><summary>How is this different from the payment option I use now?</summary><p>Most payment add-ons are separate processors. They take the payment, charge their own fee and pay you out later. Transiqe is software only. The payment runs through your own NAB Gateway and settles to your NAB account, at the fees you agreed with NAB.</p></details>
     <details><summary>Does Transiqe hold my money?</summary><p>No. Card payments go from your customer to your NAB merchant facility and settle to your account. Transiqe moves the information: the invoice to your customer and the payment record back to Xero.</p></details>
-    <details><summary>What happens with repeating invoices?</summary><p>Set them up in Xero as you do now. Each invoice Xero creates flows into Transiqe. Customers who have opted in to autopay are charged automatically, and everyone else gets the invoice with a Pay now button.</p></details>
-    <details><summary>Can my customers opt out of automatic payments?</summary><p>Yes, at any time, from their portal or by asking you. Autopay is always the customer's choice and they see the terms before they opt in.</p></details>
-    <details><summary>What changes in Xero?</summary><p>Very little. Your invoices gain a Pay now button, and payments appear against invoices as they are made. Your bookkeeper will see them recorded with the payment reference.</p></details>
+    <p style="margin-top:22px"><a class="textlink" href="faq.html">See all questions</a></p>
   </div>
 </div></section>
 

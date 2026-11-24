@@ -6,6 +6,8 @@
   var doc = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  doc.classList.add('js');
+
   /* ---- mobile menu ---- */
   var btn = document.getElementById('menu-btn'), menu = document.getElementById('mobile-menu');
   if (btn && menu) {
@@ -14,6 +16,80 @@
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
+
+  /* ---- dropdown menus (event delegation, so the compact bar's copy works too) ---- */
+  var hoverable = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var closeTimer = null;
+  function setOpen(dd, open) {
+    if (!dd) return;
+    dd.classList.toggle('open', open);
+    var b = dd.querySelector('.dd-btn'); if (b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeAll(except) {
+    [].forEach.call(document.querySelectorAll('.dd.open'), function (d) { if (d !== except) setOpen(d, false); });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.dd-btn');
+    if (b) {
+      var dd = b.parentNode, open = !dd.classList.contains('open');
+      if (hoverable && e.detail > 0 && !open) return; // already opened by hover; a mouse click keeps it open
+      closeAll(dd); setOpen(dd, open);
+      return;
+    }
+    if (!(e.target.closest && e.target.closest('.dd-panel'))) closeAll();
+  });
+  if (hoverable) {
+    document.addEventListener('mouseover', function (e) {
+      var dd = e.target.closest && e.target.closest('.dd');
+      if (!dd) return;
+      clearTimeout(closeTimer);
+      if (!dd.classList.contains('open')) { closeAll(dd); setOpen(dd, true); }
+    });
+    document.addEventListener('mouseout', function (e) {
+      var dd = e.target.closest && e.target.closest('.dd');
+      if (!dd || (e.relatedTarget && dd.contains(e.relatedTarget))) return;
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { setOpen(dd, false); }, 160);
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var open = document.querySelector('.dd.open');
+    if (open) { setOpen(open, false); var b = open.querySelector('.dd-btn'); if (b) b.focus(); }
+  });
+  document.addEventListener('focusin', function (e) {
+    var dd = e.target.closest && e.target.closest('.dd');
+    closeAll(dd || null);
+  });
+
+  /* ---- live search on the FAQ and help centre ---- */
+  [].forEach.call(document.querySelectorAll('input[data-filter]'), function (input) {
+    var scope = document.querySelector(input.getAttribute('data-filter'));
+    if (!scope) return;
+    var items = [].slice.call(scope.querySelectorAll('[data-q]'));
+    var groups = [].slice.call(scope.querySelectorAll('[data-group]'));
+    var empty = scope.querySelector('[data-empty]');
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (el) {
+        var hit = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
+        el.hidden = !hit;
+        if (hit) { shown++; if (q && el.tagName === 'DETAILS') el.open = true; }
+      });
+      groups.forEach(function (g) { g.hidden = !g.querySelector('[data-q]:not([hidden])'); });
+      if (empty) empty.hidden = shown !== 0;
+      if (q) { var r = scope.getBoundingClientRect(); if (r.top > window.innerHeight * 0.6) scope.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* open a guide or question when its link is followed */
+  function openFromHash() {
+    var id = location.hash.slice(1); if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', openFromHash); openFromHash();
 
   /* ---- compact bar after the hero ---- */
   var firstNav = document.querySelector('.nav');
@@ -25,7 +101,8 @@
     clone.classList.remove('on-image');
     clone.classList.add('on-paper');
     var b = clone.querySelector('.burger'); if (b) b.remove();
-    var cta = clone.querySelector('.btn'); if (cta) { cta.classList.remove('white'); cta.classList.add('ink'); }
+    [].forEach.call(clone.querySelectorAll('[id]'), function (el) { el.removeAttribute('id'); });
+    var cta = clone.querySelector('.acts .btn'); if (cta) { cta.classList.remove('white'); cta.classList.add('ink'); }
     [].forEach.call(clone.querySelectorAll('a,button'), function (a) { a.tabIndex = -1; });
     dock.appendChild(clone);
     document.body.appendChild(dock);
@@ -35,6 +112,7 @@
       if (want === shown) return;
       shown = want;
       dock.classList.toggle('show', want);
+      if (!want) [].forEach.call(dock.querySelectorAll('.dd.open'), function (d) { setOpen(d, false); });
       dock.setAttribute('aria-hidden', want ? 'false' : 'true');
       [].forEach.call(clone.querySelectorAll('a,button'), function (a) { a.tabIndex = want ? 0 : -1; });
     };
