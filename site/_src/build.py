@@ -1,12 +1,18 @@
 # Builds the static marketing site from the page modules in this folder.
 # Run from anywhere:  python3 site/_src/build.py
 # Output: site/*.html  (plain HTML, no build step needed to host it)
-import pathlib, sys, html
+import pathlib, sys, html, re
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from og import OG
 
 SRC = pathlib.Path(__file__).parent
 OUT = SRC.parent
 APP = 'https://app.transiqe.com'          # the platform: sign in, sign up, customer portal
 SITE = 'https://www.transiqe.com'
+# Where link preview images are loaded from. Messaging apps need a full web address,
+# so this must be a host that serves this version of the site. Change it to SITE
+# once www.transiqe.com points at the new site.
+OG_HOST = 'https://transiqeworkingmodel.vercel.app'
 ENTITY = 'Generate Your Audience Pty Ltd'
 ABN = '68 620 590 481'
 
@@ -103,12 +109,20 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="
 
 def head_tags(title, desc, name):
     t, d = html.escape(title), html.escape(desc)
+    key = name if name in OG else 'index'
+    img = f'{OG_HOST}/assets/og/{key}.jpg'
+    alt = html.escape('Transiqe: ' + re.sub('<[^>]+>', '', html.unescape(OG[key]['h'])))
     return (f'<title>{t}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
             f'<meta name="description" content="{d}">\n'
             f'<link rel="canonical" href="{SITE}/{"" if name == "index" else name + ".html"}">\n'
             f'<link rel="icon" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">\n'
-            f'<meta property="og:title" content="{t}"><meta property="og:description" content="{d}">'
-            f'<meta property="og:image" content="{SITE}/assets/og.png"><meta property="og:type" content="website">\n'
+            f'<meta property="og:site_name" content="Transiqe"><meta property="og:type" content="website">\n'
+            f'<meta property="og:title" content="{t}"><meta property="og:description" content="{d}">\n'
+            f'<meta property="og:image" content="{img}"><meta property="og:image:type" content="image/jpeg">'
+            f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+            f'<meta property="og:image:alt" content="{alt}">\n'
+            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{t}">'
+            f'<meta name="twitter:description" content="{d}"><meta name="twitter:image" content="{img}">\n'
             f'{FONTS}\n<link rel="stylesheet" href="css/site.css">\n')
 
 
